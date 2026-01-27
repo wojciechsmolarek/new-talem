@@ -1,0 +1,73 @@
+<nav
+    class="fixed top-0 left-0 w-full z-[1000] bg-white/95 backdrop-blur-[10px] border-b border-gray-200"
+>
+    <div
+        class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center"
+    >
+        <div class="flex items-center gap-4">
+            <span class="font-display text-2xl font-black tracking-[-0.02em]"
+                >TALEM</span
+            >
+            <span
+                class="logo-metric font-mono text-[0.75rem] text-accent bg-accent/10 px-2 py-1 rounded font-semibold transition-colors"
+                >↑ 347%</span
+            >
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a
+                href="#uslugi"
+                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
+                >Usługi</a
+            >
+            <a
+                href="#wyniki"
+                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
+                >Wyniki</a
+            >
+            <a
+                href="#proces"
+                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
+                >Proces</a
+            >
+            <a
+                href="#kontakt"
+                class="flex items-center gap-2 px-6 py-[0.65rem] bg-accent text-white rounded-full font-semibold transition-all hover:bg-black hover:shadow-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent"
+                >Bezpłatna Analiza</a
+            >
+        </div>
+        <!-- Mobile Menu Placeholder -->
+        <div class="md:hidden">
+            <button class="text-black p-2">
+                <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    ><path d="M4 6h16M4 12h16M4 18h16"></path></svg
+                >
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Maintain the dynamic logo metric functionality
+    const logoMetric = document.querySelector(".logo-metric");
+    if (logoMetric instanceof HTMLElement) {
+        setInterval(() => {
+            const matches = logoMetric.textContent?.match(/\d+/);
+            if (matches) {
+                const currentValue = parseInt(matches[0]);
+                const variation = Math.floor(Math.random() * 10) - 5;
+                const newValue = Math.max(
+                    300,
+                    Math.min(400, currentValue + variation),
+                );
+                logoMetric.textContent = `↑ ${newValue}%`;
+            }
+        }, 5000);
+    }
+</script>

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@theme {
+  --color-black: #0a0a0a;
+  --color-white: #ffffff;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-accent: #8b0029;
+  --color-accent-dim: #6d001f;
+  --color-accent-light: #b8003a;
+  --color-accent-pale: #ffeef3;
+
+  --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes growUp {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pulseSlide {
+
+    0%,
+    100% {
+      left: -100%;
+    }
+
+    50% {
+      left: 100%;
+    }
+  }
+}
+
+
+@layer base {
+  body {
+    @apply m-0 p-0 font-body bg-white text-black leading-relaxed overflow-x-hidden;
+  }
+}

@@ -1,0 +1,86 @@
+<section class="bg-black text-white px-8 py-16">
+  <div
+    class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-12 lg:gap-8"
+  >
+    <div class="flex flex-col gap-2 min-w-[150px]">
+      <span
+        class="stat-number font-mono text-[2.5rem] lg:text-[3rem] font-bold text-accent leading-none"
+        data-target="8">0</span
+      >
+      <span
+        class="text-[0.85rem] text-gray-400 font-medium uppercase tracking-wider"
+        >lat doświadczenia</span
+      >
+    </div>
+    <div class="hidden lg:block w-px h-[60px] bg-gray-700"></div>
+    <div class="flex flex-col gap-2 min-w-[150px]">
+      <span
+        class="stat-number font-mono text-[2.5rem] lg:text-[3rem] font-bold text-accent leading-none"
+        data-target="120">0</span
+      >
+      <span
+        class="text-[0.85rem] text-gray-400 font-medium uppercase tracking-wider"
+        >+ projektów</span
+      >
+    </div>
+    <div class="hidden lg:block w-px h-[60px] bg-gray-700"></div>
+    <div class="flex flex-col gap-2 min-w-[150px]">
+      <span
+        class="stat-number font-mono text-[2.5rem] lg:text-[3rem] font-bold text-accent leading-none"
+        data-target="94">0</span
+      >
+      <span
+        class="text-[0.85rem] text-gray-400 font-medium uppercase tracking-wider"
+        >% retention rate</span
+      >
+    </div>
+    <div class="hidden lg:block w-px h-[60px] bg-gray-700"></div>
+    <div class="flex flex-col gap-2 min-w-[150px]">
+      <span
+        class="stat-number font-mono text-[2.5rem] lg:text-[3rem] font-bold text-accent leading-none"
+        data-target="24">0</span
+      >
+      <span
+        class="text-[0.85rem] text-gray-400 font-medium uppercase tracking-wider"
+        >M+ wizyt organicznych</span
+      >
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for number animation
+  const animateStats = (
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target as HTMLElement;
+        const countTo = parseInt(target.getAttribute("data-target") || "0");
+        let count = 0;
+        const duration = 2000;
+        const increment = countTo / (duration / 16);
+
+        const updateCount = () => {
+          count += increment;
+          if (count < countTo) {
+            target.innerText = Math.floor(count).toString();
+            requestAnimationFrame(updateCount);
+          } else {
+            target.innerText = countTo.toString();
+          }
+        };
+        updateCount();
+        observer.unobserve(target);
+      }
+    });
+  };
+
+  const statsObserver = new IntersectionObserver(animateStats, {
+    threshold: 0.1,
+  });
+  document
+    .querySelectorAll(".stat-number")
+    .forEach((el) => statsObserver.observe(el));
+</script>
