@@ -44,7 +44,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:image" content="https://talem.eu/og-image.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
 
     <!-- Font Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,58 +54,74 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
     />
 
-    <!-- Schema.org Organization Markup -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TALEM",
-        "description": "Agencja SEO oparta na danych",
-        "url": "https://talem.eu",
-        "email": "hello@talem.pl",
-        "telephone": "+48123456789",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "PL"
-        }
-      }
-    </script>
-
-    <!-- Schema.org ProfessionalService Markup -->
+    <!-- Consolidated Schema.org Markup -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
+        "@id": "https://talem.eu/#organization",
         "name": "TALEM - Agencja SEO",
-        "serviceType": [
-          "SEO",
-          "Content Marketing",
-          "Link Building",
-          "Technical SEO",
-          "Local SEO"
-        ],
-        "areaServed": "PL",
-        "url": "https://talem.eu"
+        "alternateName": "Agencja SEO Talem Bydgoszcz",
+        "description": "Najdłużej działająca firma na bydgoskim rynku usług SEO. Od 2006 roku wykorzystujemy zaawansowane techniki SEO, aby pomagać naszym klientom odnosić sukcesy w wyszukiwarkach.",
+        "url": "https://talem.eu",
+        "logo": "https://www.talem.eu/wp-content/uploads/2020/11/Agencja-SEO-Talem-Bydgoszcz-130-e1672571178116-220x0-c-default.png",
+        "image": "https://www.talem.eu/wp-content/uploads/2020/11/Agencja-SEO-Talem-Bydgoszcz-130-e1672571178116-220x0-c-default.png",
+        "foundingDate": "2006",
+        "email": "hello@talem.pl",
+        "telephone": ["+48523667070", "801080238"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Toruńska 33",
+          "addressLocality": "Bydgoszcz",
+          "addressRegion": "Kujawsko-Pomorskie",
+          "addressCountry": "PL"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Polska"
+        },
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Usługi SEO",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Techniczne",
+                "description": "Audyt i optymalizacja fundamentów: szybkość, crawlability, Core Web Vitals, schema markup, mobile-first optimization."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Content Marketing",
+                "description": "Strategia treści oparta na analizie konkurencji i search intent. Keyword research, content planning, SEO copywriting."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Link Building",
+                "description": "Budowanie autorytetu domeny poprzez wysokiej jakości linki. Digital PR, content partnerships, backlink monitoring."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Local SEO",
+                "description": "Optymalizacja dla wyszukiwań lokalnych i Google Maps. GMB optimization, local citations, review management."
+              }
+            }
+          ]
+        },
+        "sameAs": ["https://www.talem.eu"]
       }
     </script>
-
-    <!-- Schema.org BreadcrumbList Markup -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://talem.eu"
-          }
-        ]
-      }
-    </script>
-
-    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <slot />
