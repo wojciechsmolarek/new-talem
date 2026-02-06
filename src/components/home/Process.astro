@@ -1,0 +1,125 @@
+<section
+  id="proces"
+  class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32"
+>
+  <div class="max-w-[1000px] mx-auto">
+    <div class="mb-16">
+      <span
+        class="font-mono text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-accent mb-4 block"
+        >JAK DZIAŁAMY</span
+      >
+      <h2
+        class="font-display text-[2.5rem] lg:text-[4rem] font-black leading-[1.2] tracking-[-0.02em]"
+      >
+        Sprawdzony proces,<br />mierzalne rezultaty
+      </h2>
+    </div>
+
+    <div class="flex flex-col gap-0">
+      <!-- Step 1 -->
+      <div
+        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+      >
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">01</span>
+          <svg class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="pt-1">
+          <h3 class="font-display text-[1.35rem] lg:text-[1.5rem] font-bold mb-3 leading-tight">
+            Audyt i rozpoznanie
+          </h3>
+          <p class="text-gray-500 leading-[1.7] text-[0.95rem] mb-3">
+            Wielopoziomowa analiza aktualnej sytuacji SEO Twojego sklepu, konkurencji i mozliwosci.
+          </p>
+          <span class="font-mono text-[0.8rem] text-accent font-semibold uppercase tracking-wider">2 tygodnie</span>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div
+        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+      >
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">02</span>
+          <svg class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="pt-1">
+          <h3 class="font-display text-[1.35rem] lg:text-[1.5rem] font-bold mb-3 leading-tight">
+            Strategia i planowanie
+          </h3>
+          <p class="text-gray-500 leading-[1.7] text-[0.95rem] mb-3">
+            Tworzymy dedykowana strategie SEO z jasno okreslonymi celami i rozwojem.
+          </p>
+          <span class="font-mono text-[0.8rem] text-accent font-semibold uppercase tracking-wider">2 tygodnie</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div
+        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+      >
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">03</span>
+          <svg class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="pt-1">
+          <h3 class="font-display text-[1.35rem] lg:text-[1.5rem] font-bold mb-3 leading-tight">
+            Implementacja i działania SEO
+          </h3>
+          <p class="text-gray-500 leading-[1.7] text-[0.95rem] mb-3">
+            Realizujemy zaplanowane dzialania: optymalizacje techniczne, content, link building.
+          </p>
+          <span class="font-mono text-[0.8rem] text-accent font-semibold uppercase tracking-wider">Ongoing</span>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div
+        class="process-step flex items-start gap-6 lg:gap-10 py-10 opacity-0 translate-x-[-20px]"
+      >
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">04</span>
+          <svg class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="pt-1">
+          <h3 class="font-display text-[1.35rem] lg:text-[1.5rem] font-bold mb-3 leading-tight">
+            Monitoring i raportowanie
+          </h3>
+          <p class="text-gray-500 leading-[1.7] text-[0.95rem] mb-3">
+            Ciagly monitoring wynikow, raportowanie i dazenie do maksymalizacji ROI.
+          </p>
+          <span class="font-mono text-[0.8rem] text-accent font-semibold uppercase tracking-wider">Ongoing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const revealSteps = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target as HTMLElement;
+        target.style.opacity = "1";
+        target.style.transform = "translateX(0)";
+      }
+    });
+  };
+
+  const stepObserver = new IntersectionObserver(revealSteps, {
+    threshold: 0.1,
+  });
+  document.querySelectorAll(".process-step").forEach((el) => {
+    (el as HTMLElement).style.transition =
+      "all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)";
+    stepObserver.observe(el);
+  });
+</script>
