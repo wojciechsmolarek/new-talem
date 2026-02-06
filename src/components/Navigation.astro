@@ -139,9 +139,15 @@
                 >Bezpłatna Analiza</a
             >
         </div>
-        <!-- Mobile Menu Placeholder -->
+        <!-- Mobile Menu Button -->
         <div class="md:hidden">
-            <button class="text-black p-2">
+            <button
+                data-mobile-menu-button
+                class="text-black p-2"
+                aria-label="Otwórz menu nawigacji"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
                 <svg
                     aria-hidden="true"
                     width="24"
@@ -157,77 +163,102 @@
     </div>
 </nav>
 
+<!-- Mobile Menu Overlay -->
+<div
+    data-mobile-menu-overlay
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+></div>
+
+<!-- Mobile Menu -->
+<div
+    data-mobile-menu
+    id="mobile-menu"
+    class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[1000] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto"
+>
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-display text-2xl font-black">Menu</span>
+            <button
+                data-mobile-menu-close
+                class="text-black p-2"
+                aria-label="Zamknij menu"
+            >
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="flex flex-col gap-6">
+            <a
+                href="/seo-dla-e-commerce"
+                class="text-lg font-semibold text-black hover:text-accent transition-colors py-2"
+                >SEO dla E-commerce</a
+            >
+            <a
+                href="#wyniki"
+                class="text-lg font-semibold text-black hover:text-accent transition-colors py-2"
+                >Wyniki</a
+            >
+            <a
+                href="#proces"
+                class="text-lg font-semibold text-black hover:text-accent transition-colors py-2"
+                >Proces</a
+            >
+            <a
+                href="#kontakt"
+                class="flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-semibold transition-all hover:bg-black mt-4"
+                >Bezpłatna Analiza</a
+            >
+        </nav>
+    </div>
+</div>
+
 <script>
+    import { createDropdown } from '../utils/dropdown';
+    import { createMobileMenu } from '../utils/mobileMenu';
+
     // Maintain the dynamic logo metric functionality
-    const logoMetric = document.querySelector(".logo-metric");
+    const logoMetric = document.querySelector('.logo-metric');
     if (logoMetric instanceof HTMLElement) {
         setInterval(() => {
             const matches = logoMetric.textContent?.match(/\d+/);
             if (matches) {
                 const currentValue = parseInt(matches[0]);
                 const variation = Math.floor(Math.random() * 10) - 5;
-                const newValue = Math.max(
-                    300,
-                    Math.min(400, currentValue + variation),
-                );
+                const newValue = Math.max(300, Math.min(400, currentValue + variation));
                 logoMetric.textContent = `↑ ${newValue}%`;
             }
         }, 5000);
     }
 
-    // Dropdown menu logic
-    const dropdown = document.querySelector("[data-dropdown]");
-    if (dropdown) {
-        const trigger = dropdown.querySelector(".nav-dropdown-trigger");
-        const menu = dropdown.querySelector(".nav-dropdown-menu");
-        const chevron = dropdown.querySelector(".nav-dropdown-chevron");
-        let closeTimeout: ReturnType<typeof setTimeout> | null = null;
+    // Initialize dropdown menu
+    createDropdown('[data-dropdown]');
 
-        function openDropdown() {
-            if (closeTimeout) {
-                clearTimeout(closeTimeout);
-                closeTimeout = null;
-            }
-            if (menu && trigger && chevron) {
-                menu.classList.remove("opacity-0", "invisible", "translate-y-1", "pointer-events-none");
-                menu.classList.add("opacity-100", "visible", "translate-y-0", "pointer-events-auto");
-                trigger.setAttribute("aria-expanded", "true");
-                chevron.classList.add("rotate-180");
-            }
-        }
+    // Initialize mobile menu
+    createMobileMenu();
 
-        function closeDropdown() {
-            closeTimeout = setTimeout(() => {
-                if (menu && trigger && chevron) {
-                    menu.classList.add("opacity-0", "invisible", "translate-y-1", "pointer-events-none");
-                    menu.classList.remove("opacity-100", "visible", "translate-y-0", "pointer-events-auto");
-                    trigger.setAttribute("aria-expanded", "false");
-                    chevron.classList.remove("rotate-180");
-                }
-            }, 120);
-        }
+    // Also handle close button in mobile menu
+    const closeButton = document.querySelector('[data-mobile-menu-close]');
+    const menuButton = document.querySelector('[data-mobile-menu-button]');
+    const menu = document.querySelector('[data-mobile-menu]');
+    const overlay = document.querySelector('[data-mobile-menu-overlay]');
 
-        dropdown.addEventListener("mouseenter", openDropdown);
-        dropdown.addEventListener("mouseleave", closeDropdown);
-
-        // Also support click for touch devices
-        trigger?.addEventListener("click", () => {
-            const isOpen = trigger.getAttribute("aria-expanded") === "true";
-            if (isOpen) {
-                if (closeTimeout) clearTimeout(closeTimeout);
-                closeDropdown();
-            } else {
-                openDropdown();
-            }
-        });
-
-        // Close on Escape key
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && trigger?.getAttribute("aria-expanded") === "true") {
-                if (closeTimeout) clearTimeout(closeTimeout);
-                closeDropdown();
-                (trigger as HTMLElement)?.focus();
-            }
+    if (closeButton && menuButton && menu && overlay) {
+        closeButton.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+            menu.classList.remove('translate-x-0');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            menuButton.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         });
     }
 </script>
