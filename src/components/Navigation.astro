@@ -30,11 +30,99 @@
             >
         </a>
         <div class="hidden md:flex gap-8 items-center">
-            <a
-                href="#uslugi"
-                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-                >Usługi</a
-            >
+            <!-- Oferta Dropdown -->
+            <div class="nav-dropdown relative" data-dropdown>
+                <button
+                    type="button"
+                    class="nav-dropdown-trigger relative flex items-center gap-1.5 no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1 cursor-pointer bg-transparent border-none"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                >
+                    Oferta
+                    <svg class="nav-dropdown-chevron w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 4.5L6 7.5L9 4.5" />
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible translate-y-1 transition-all duration-200 pointer-events-none z-50">
+                    <div class="bg-white rounded-xl border border-gray-200 shadow-xl shadow-black/8 p-2 w-[540px]">
+                        <!-- Header -->
+                        <a href="/seo-dla-e-commerce" class="block px-4 py-3 mb-1 no-underline group">
+                            <span class="block font-mono text-[0.65rem] uppercase tracking-[0.15em] text-accent font-semibold mb-1">Zaawansowane usługi SEO</span>
+                            <span class="block font-display text-[1.05rem] text-black group-hover:text-accent transition-colors">SEO dla E-commerce</span>
+                        </a>
+                        <div class="h-px bg-gray-200 mx-3 mb-1"></div>
+                        <!-- Services Grid -->
+                        <div class="grid grid-cols-2 gap-0.5">
+                            <a href="/seo-dla-e-commerce#techniczne-seo" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">Techniczne SEO</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Wydajnosc, Core Web Vitals, RUM Testy</span>
+                                </span>
+                            </a>
+                            <a href="/seo-dla-e-commerce#content-marketing" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">Content Marketing</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Strategia tresci dla sklepow e-commerce</span>
+                                </span>
+                            </a>
+                            <a href="/seo-dla-e-commerce#ai-automatyzacja" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2a4 4 0 014 4v1a1 1 0 001 1h1a4 4 0 010 8h-1a1 1 0 00-1 1v1a4 4 0 01-8 0v-1a1 1 0 00-1-1H6a4 4 0 010-8h1a1 1 0 001-1V6a4 4 0 014-4z" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">AI & Automatyzacja</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Autorskie narzedzia i skrypty n8n</span>
+                                </span>
+                            </a>
+                            <a href="/seo-dla-e-commerce#strategia" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">Strategia SEO/AI</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Budowanie strategii wzrostu e-commerce</span>
+                                </span>
+                            </a>
+                            <a href="/seo-dla-e-commerce#migracje" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">Migracje Sklepow</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Bezpieczna migracja bez utraty pozycji</span>
+                                </span>
+                            </a>
+                            <a href="/seo-dla-e-commerce#rum-testy" class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group">
+                                <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors">RUM Testy</span>
+                                    <span class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug">Real User Monitoring i optymalizacja</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <a
                 href="#wyniki"
                 class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
@@ -85,5 +173,61 @@
                 logoMetric.textContent = `↑ ${newValue}%`;
             }
         }, 5000);
+    }
+
+    // Dropdown menu logic
+    const dropdown = document.querySelector("[data-dropdown]");
+    if (dropdown) {
+        const trigger = dropdown.querySelector(".nav-dropdown-trigger");
+        const menu = dropdown.querySelector(".nav-dropdown-menu");
+        const chevron = dropdown.querySelector(".nav-dropdown-chevron");
+        let closeTimeout: ReturnType<typeof setTimeout> | null = null;
+
+        function openDropdown() {
+            if (closeTimeout) {
+                clearTimeout(closeTimeout);
+                closeTimeout = null;
+            }
+            if (menu && trigger && chevron) {
+                menu.classList.remove("opacity-0", "invisible", "translate-y-1", "pointer-events-none");
+                menu.classList.add("opacity-100", "visible", "translate-y-0", "pointer-events-auto");
+                trigger.setAttribute("aria-expanded", "true");
+                chevron.classList.add("rotate-180");
+            }
+        }
+
+        function closeDropdown() {
+            closeTimeout = setTimeout(() => {
+                if (menu && trigger && chevron) {
+                    menu.classList.add("opacity-0", "invisible", "translate-y-1", "pointer-events-none");
+                    menu.classList.remove("opacity-100", "visible", "translate-y-0", "pointer-events-auto");
+                    trigger.setAttribute("aria-expanded", "false");
+                    chevron.classList.remove("rotate-180");
+                }
+            }, 120);
+        }
+
+        dropdown.addEventListener("mouseenter", openDropdown);
+        dropdown.addEventListener("mouseleave", closeDropdown);
+
+        // Also support click for touch devices
+        trigger?.addEventListener("click", () => {
+            const isOpen = trigger.getAttribute("aria-expanded") === "true";
+            if (isOpen) {
+                if (closeTimeout) clearTimeout(closeTimeout);
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && trigger?.getAttribute("aria-expanded") === "true") {
+                if (closeTimeout) clearTimeout(closeTimeout);
+                closeDropdown();
+                (trigger as HTMLElement)?.focus();
+            }
+        });
     }
 </script>
