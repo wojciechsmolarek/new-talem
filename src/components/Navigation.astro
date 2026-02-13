@@ -1,573 +1,243 @@
+---
+// Dane nawigacji - łatwe zarządzanie w jednym miejscu
+const services = [
+  {
+    href: '/seo-dla-e-commerce#techniczne-seo',
+    title: 'Techniczne SEO',
+    desc: 'Wydajność, Core Web Vitals, RUM Testy',
+    icon: 'code',
+  },
+  {
+    href: '/seo-dla-e-commerce#content-marketing',
+    title: 'Content Marketing',
+    desc: 'Strategia treści dla sklepów',
+    icon: 'pen',
+  },
+  {
+    href: '/seo-dla-e-commerce#ai-automatyzacja',
+    title: 'AI & Automatyzacja',
+    desc: 'Autorskie narzędzia i n8n',
+    icon: 'cpu',
+  },
+  {
+    href: '/seo-dla-e-commerce#strategia',
+    title: 'Strategia SEO/AI',
+    desc: 'Budowanie wzrostu e-commerce',
+    icon: 'chart',
+  },
+  {
+    href: '/seo-dla-e-commerce#migracje',
+    title: 'Migracje Sklepów',
+    desc: 'Bezpieczna zmiana platformy',
+    icon: 'move',
+  },
+  {
+    href: '/seo-dla-e-commerce#rum-testy',
+    title: 'RUM Testy',
+    desc: 'Real User Monitoring',
+    icon: 'clock',
+  },
+];
+---
+
 <nav
   class="fixed top-0 left-0 w-full z-[1000] bg-white/95 backdrop-blur-[10px] border-b border-gray-200"
 >
-    <div
-        class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center"
-    >
-        <a href="/" class="flex items-center gap-3 group">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 275 229"
-                class="h-12 w-auto transition-transform group-hover:scale-105"
-                aria-label="TALEM - Agencja SEO"
-            >
-                <path
-                    fill="#600"
-                    d="M86.5 35.2c-4.5 1.6-9.2 5.4-10.7 8.8-.7 1.6-1.6 3-2 3-1.2 0-.9 102.9.3 104.3.6.7 1.9 2.7 3 4.5 1.2 2.1 3.8 4.2 7.2 5.7l5.2 2.5h47.6c33.2 0 48.6-.3 51-1.1 3.7-1.3 11.5-6.6 11.3-7.7-.1-.4.2-1.7.7-3s1.2-3.4 1.5-4.7l.6-2.5h-24.6c-20 0-25.4-.3-28.4-1.5-4.9-2.1-8.1-5.2-10.3-10-1.7-3.6-1.9-7-1.9-33.3V71h-19.1l.3-9.3.3-9.2 9.3-.3 9.2-.3V34l-23.7.1c-13.8 0-25.1.5-26.8 1.1M157 43v9h45.1l-.7-2.3c-.3-1.2-1.3-3.4-2.1-5-.7-1.5-1.1-2.7-.7-2.7 1.4 0-4.6-4.1-8.8-6-3.6-1.6-6.6-2-18.5-2H157z"
-                ></path>
-                <path
-                    fill="#600"
-                    d="M157 94.5c0 25.6.4 28 5.5 30.3 1.7.8 8.9 1.2 21 1.2H202V71h-45z"
-                ></path>
-                <path
-                    fill="#FFF"
-                    d="M138 43.5V53h-18v18h18v27.7c0 16.3.4 29.4 1.1 31.6 1.2 4.4 5.9 10.1 10.3 12.5 2.6 1.4 6.9 1.7 27.9 2l24.7.4V127h-18.2c-29 0-28.8.3-28.8-33.3V71h47V53h-47V34h-17z"
-                ></path>
-            </svg>
-            <span
-                class="logo-metric font-mono text-[0.75rem] text-accent bg-accent/10 px-2 py-1 rounded font-semibold transition-colors"
-                >↑ 347%</span
-            >
-        </a>
-        <div class="hidden md:flex gap-8 items-center">
-            <a
-                href="#proces"
-                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-                >O nas</a
-            >
-            <!-- Uslugi Dropdown -->
-            <div class="nav-dropdown relative" data-dropdown>
-                <button
-                    type="button"
-                    class="nav-dropdown-trigger relative flex items-center gap-1.5 no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1 cursor-pointer bg-transparent border-none"
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                >
-                    Usługi
-                    <svg
-                        class="nav-dropdown-chevron w-3.5 h-3.5 transition-transform duration-200"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M3 4.5L6 7.5L9 4.5"></path>
-                    </svg>
-                </button>
-                <div
-                    class="nav-dropdown-menu absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible translate-y-1 transition-all duration-200 pointer-events-none z-50"
-                >
-                    <div
-                        class="bg-white rounded-xl border border-gray-200 shadow-xl shadow-black/8 p-2 w-[540px]"
-                    >
-                        <!-- Header -->
-                        <a
-                            href="/seo-dla-e-commerce"
-                            class="block px-4 py-3 mb-1 no-underline group"
-                        >
-                            <span
-                                class="block font-mono text-[0.65rem] uppercase tracking-[0.15em] text-accent font-semibold mb-1"
-                                >Zaawansowane usługi SEO</span
-                            >
-                            <span
-                                class="block font-display text-[1.05rem] text-black group-hover:text-accent transition-colors"
-                                >SEO dla E-commerce</span
-                            >
-                        </a>
-                        <div class="h-px bg-gray-200 mx-3 mb-1"></div>
-                        <!-- Services Grid -->
-                        <div class="grid grid-cols-2 gap-0.5">
-                            <a
-                                href="/seo-dla-e-commerce#techniczne-seo"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >Techniczne SEO</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Wydajnosc, Core Web Vitals, RUM Testy</span
-                                    >
-                                </span>
-                            </a>
-                            <a
-                                href="/seo-dla-e-commerce#content-marketing"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >Content Marketing</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Strategia tresci dla sklepow e-commerce</span
-                                    >
-                                </span>
-                            </a>
-                            <a
-                                href="/seo-dla-e-commerce#ai-automatyzacja"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M12 2a4 4 0 014 4v1a1 1 0 001 1h1a4 4 0 010 8h-1a1 1 0 00-1 1v1a4 4 0 01-8 0v-1a1 1 0 00-1-1H6a4 4 0 010-8h1a1 1 0 001-1V6a4 4 0 014-4z"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >AI & Automatyzacja</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Autorskie narzedzia i skrypty n8n</span
-                                    >
-                                </span>
-                            </a>
-                            <a
-                                href="/seo-dla-e-commerce#strategia"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >Strategia SEO/AI</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Budowanie strategii wzrostu e-commerce</span
-                                    >
-                                </span>
-                            </a>
-                            <a
-                                href="/seo-dla-e-commerce#migracje"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >Migracje Sklepow</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Bezpieczna migracja bez utraty pozycji</span
-                                    >
-                                </span>
-                            </a>
-                            <a
-                                href="/seo-dla-e-commerce#rum-testy"
-                                class="flex items-start gap-3 px-4 py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors group"
-                            >
-                                <span
-                                    class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-accent"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span>
-                                    <span
-                                        class="block text-[0.85rem] font-semibold text-black group-hover:text-accent transition-colors"
-                                        >RUM Testy</span
-                                    >
-                                    <span
-                                        class="block text-[0.75rem] text-gray-500 mt-0.5 leading-snug"
-                                        >Real User Monitoring i optymalizacja</span
-                                    >
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a
-                href="#wyniki"
-                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-                >Wyniki</a
-            >
-            <a
-                href="#proces"
-                class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-                >Proces</a
-            >
-            <a
-                href="#kontakt"
-                class="flex items-center gap-2 px-6 py-[0.65rem] bg-accent text-white rounded-full font-semibold transition-all hover:bg-black hover:shadow-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent"
-                >Bezpłatna Analiza</a
-            >
-        </div>
-        <!-- Mobile Menu Placeholder -->
-        <div class="md:hidden">
-            <button class="text-black p-2">
-                <svg
-                    aria-hidden="true"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    ><path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-      </div>
-      <a
-        href="#wyniki"
-        class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-        >Wyniki</a
-      >
-      <a
-        href="#proces"
-        class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
-        >Proces</a
-      >
-      <a
-        href="#kontakt"
-        class="flex items-center gap-2 px-6 py-[0.65rem] bg-accent text-white rounded-full font-semibold transition-all hover:bg-black hover:shadow-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent"
-        >Bezpłatna Analiza</a
-      >
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button
-      data-mobile-menu-button
-      class="md:hidden text-black p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
-      aria-label="Otwórz menu nawigacji"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3 group">
       <svg
-        data-menu-icon
-        aria-hidden="true"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 275 229"
+        class="h-10 w-auto transition-transform group-hover:scale-105"
+        aria-label="TALEM"
       >
-        <path d="M4 6h16M4 12h16M4 18h16"></path>
+        <path
+          fill="#600"
+          d="M86.5 35.2c-4.5 1.6-9.2 5.4-10.7 8.8-.7 1.6-1.6 3-2 3-1.2 0-.9 102.9.3 104.3.6.7 1.9 2.7 3 4.5 1.2 2.1 3.8 4.2 7.2 5.7l5.2 2.5h47.6c33.2 0 48.6-.3 51-1.1 3.7-1.3 11.5-6.6 11.3-7.7-.1-.4.2-1.7.7-3s1.2-3.4 1.5-4.7l.6-2.5h-24.6c-20 0-25.4-.3-28.4-1.5-4.9-2.1-8.1-5.2-10.3-10-1.7-3.6-1.9-7-1.9-33.3V71h-19.1l.3-9.3.3-9.2 9.3-.3 9.2-.3V34l-23.7.1c-13.8 0-25.1.5-26.8 1.1M157 43v9h45.1l-.7-2.3c-.3-1.2-1.3-3.4-2.1-5-.7-1.5-1.1-2.7-.7-2.7 1.4 0-4.6-4.1-8.8-6-3.6-1.6-6.6-2-18.5-2H157z"
+        ></path>
+        <path fill="#600" d="M157 94.5c0 25.6.4 28 5.5 30.3 1.7.8 8.9 1.2 21 1.2H202V71h-45z"
+        ></path>
+        <path
+          fill="#FFF"
+          d="M138 43.5V53h-18v18h18v27.7c0 16.3.4 29.4 1.1 31.6 1.2 4.4 5.9 10.1 10.3 12.5 2.6 1.4 6.9 1.7 27.9 2l24.7.4V127h-18.2c-29 0-28.8.3-28.8-33.3V71h47V53h-47V34h-17z"
+        ></path>
       </svg>
-      <svg
-        data-close-icon
-        aria-hidden="true"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        class="hidden"
+      <span
+        class="logo-metric font-mono text-[0.7rem] text-accent bg-accent/10 px-2 py-0.5 rounded font-bold"
+        >↑ 347%</span
       >
-        <path d="M18 6L6 18M6 6l12 12"></path>
-      </svg>
-    </button>
-  </div>
-</nav>
+    </a>
 
-<script>
-    // Maintain the dynamic logo metric functionality
-    const logoMetric = document.querySelector(".logo-metric");
-    if (logoMetric instanceof HTMLElement) {
-        setInterval(() => {
-            const matches = logoMetric.textContent?.match(/\d+/);
-            if (matches) {
-                const currentValue = parseInt(matches[0]);
-                const variation = Math.floor(Math.random() * 10) - 5;
-                const newValue = Math.max(
-                    300,
-                    Math.min(400, currentValue + variation)
-                );
-                logoMetric.textContent = `↑ ${newValue}%`;
-            }
-        }, 5000);
-    }
-<!-- Mobile Menu Overlay -->
-<div
-  data-mobile-menu-overlay
-  class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
-  aria-hidden="true"
->
-</div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="#proces" class="nav-link-hover">O nas</a>
 
-<!-- Mobile Menu Panel -->
-<div
-  data-mobile-menu
-  id="mobile-menu"
-  class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[1000] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto shadow-2xl"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Menu nawigacji"
->
-  <div class="p-6">
-    <div class="flex justify-between items-center mb-8">
-      <span class="font-display text-2xl font-black text-black">Menu</span>
-    </div>
-
-        function openDropdown() {
-            if (closeTimeout) {
-                clearTimeout(closeTimeout);
-                closeTimeout = null;
-            }
-            if (menu && trigger && chevron) {
-                menu.classList.remove(
-                    "opacity-0",
-                    "invisible",
-                    "translate-y-1",
-                    "pointer-events-none"
-                );
-                menu.classList.add(
-                    "opacity-100",
-                    "visible",
-                    "translate-y-0",
-                    "pointer-events-auto"
-                );
-                trigger.setAttribute("aria-expanded", "true");
-                chevron.classList.add("rotate-180");
-            }
-        }
-
-        function closeDropdown() {
-            closeTimeout = setTimeout(() => {
-                if (menu && trigger && chevron) {
-                    menu.classList.add(
-                        "opacity-0",
-                        "invisible",
-                        "translate-y-1",
-                        "pointer-events-none"
-                    );
-                    menu.classList.remove(
-                        "opacity-100",
-                        "visible",
-                        "translate-y-0",
-                        "pointer-events-auto"
-                    );
-                    trigger.setAttribute("aria-expanded", "false");
-                    chevron.classList.remove("rotate-180");
-                }
-            }, 120);
-        }
-    <nav class="flex flex-col gap-2">
-      <!-- Mobile Services Accordion -->
-      <div class="border-b border-gray-200 pb-2">
-        <button
-          data-mobile-services-toggle
-          class="w-full flex items-center justify-between text-lg font-semibold text-black hover:text-accent transition-colors py-3 bg-transparent border-none cursor-pointer"
-          aria-expanded="false"
-        >
-          <span>Usługi</span>
+      <div class="relative group" data-dropdown>
+        <button class="nav-link-hover flex items-center gap-1.5" aria-expanded="false">
+          Usługi
           <svg
-            data-mobile-services-chevron
-            class="w-5 h-5 transition-transform duration-200"
-            viewBox="0 0 12 12"
+            class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            viewBox="0 0 12 12"
+            ><path
+              d="M3 4.5L6 7.5L9 4.5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path></svg
           >
-            <path d="M3 4.5L6 7.5L9 4.5"></path>
-          </svg>
         </button>
+
         <div
-          data-mobile-services-menu
-          class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+          class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-200 z-50"
         >
-          <div class="pl-4 py-2 flex flex-col gap-3">
+          <div class="bg-white rounded-xl border border-gray-200 shadow-2xl p-2 w-[540px]">
             <a
               href="/seo-dla-e-commerce"
-              class="text-base font-medium text-accent hover:text-black transition-colors py-1"
+              class="block px-4 py-3 mb-1 hover:bg-gray-50 rounded-lg group/head"
             >
-              SEO dla E-commerce
+              <span
+                class="block font-mono text-[0.6rem] uppercase tracking-widest text-accent font-bold"
+                >Zaawansowane usługi SEO</span
+              >
+              <span class="block text-lg text-black group-hover/head:text-accent"
+                >SEO dla E-commerce</span
+              >
             </a>
-            <a
-              href="/seo-dla-e-commerce#techniczne-seo"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              Techniczne SEO
-            </a>
-            <a
-              href="/seo-dla-e-commerce#content-marketing"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              Content Marketing
-            </a>
-            <a
-              href="/seo-dla-e-commerce#ai-automatyzacja"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              AI & Automatyzacja
-            </a>
-            <a
-              href="/seo-dla-e-commerce#strategia"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              Strategia SEO/AI
-            </a>
-            <a
-              href="/seo-dla-e-commerce#migracje"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              Migracje Sklepow
-            </a>
-            <a
-              href="/seo-dla-e-commerce#rum-testy"
-              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
-            >
-              RUM Testy
-            </a>
+            <div class="h-px bg-gray-100 mx-3 mb-1"></div>
+            <div class="grid grid-cols-2 gap-1">
+              {
+                services.map((service) => (
+                  <a
+                    href={service.href}
+                    class="flex items-start gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                  >
+                    <div class="w-8 h-8 rounded bg-accent/5 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                      >
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="block text-sm font-bold text-black group-hover/item:text-accent">
+                        {service.title}
+                      </span>
+                      <span class="block text-[0.7rem] text-gray-500 leading-tight">
+                        {service.desc}
+                      </span>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>
 
-      <a
-        href="#wyniki"
-        class="text-lg font-semibold text-black hover:text-accent transition-colors py-3 border-b border-gray-200"
-        >Wyniki</a
-      >
-      <a
-        href="#proces"
-        class="text-lg font-semibold text-black hover:text-accent transition-colors py-3 border-b border-gray-200"
-        >Proces</a
-      >
+      <a href="#wyniki" class="nav-link-hover">Wyniki</a>
+      <a href="#proces" class="nav-link-hover">Proces</a>
+
       <a
         href="#kontakt"
-        class="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-semibold transition-all hover:bg-black mt-6 shadow-lg"
-        >Bezpłatna Analiza</a
+        class="px-6 py-2.5 bg-accent text-white rounded-full font-bold transition-all hover:bg-black hover:scale-105 active:scale-95 shadow-md"
       >
-    </nav>
+        Bezpłatna Analiza
+      </a>
+    </div>
+
+    <button data-mobile-menu-toggle class="md:hidden p-2 text-black" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        ><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"></path></svg
+      >
+    </button>
   </div>
+</nav>
+
+<div
+  data-mobile-overlay
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[1001] hidden opacity-0 transition-opacity duration-300"
+>
+</div>
+<div
+  data-mobile-panel
+  class="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-white z-[1002] translate-x-full transition-transform duration-300 p-6 flex flex-col"
+>
+  <div class="flex justify-between items-center mb-8">
+    <span class="text-xl font-bold">Menu</span>
+    <button data-mobile-menu-close class="p-2">✕</button>
+  </div>
+  <nav class="flex flex-col gap-4">
+    <a href="#proces" class="text-lg font-medium border-b border-gray-100 pb-2">O nas</a>
+
+    <div class="py-2">
+      <span class="text-accent font-bold text-sm uppercase">Usługi</span>
+      <div class="grid grid-cols-1 gap-3 mt-3 pl-2">
+        {
+          services.map((s) => (
+            <a href={s.href} class="text-base text-gray-700">
+              {s.title}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <a href="#wyniki" class="text-lg font-medium border-b border-gray-100 pb-2">Wyniki</a>
+    <a href="#proces" class="text-lg font-medium border-b border-gray-100 pb-2">Proces</a>
+
+    <a
+      href="#kontakt"
+      class="mt-4 px-6 py-3 bg-accent text-white rounded-full text-center font-bold"
+      >Bezpłatna Analiza</a
+    >
+  </nav>
 </div>
 
-<script>
-  import { createDropdown } from '../utils/dropdown';
-  import { createMobileMenu } from '../utils/mobileMenu';
+<style>
+  @reference "../styles/global.css";
 
-  // Dynamic logo metric functionality
+  .nav-link-hover {
+    @apply relative text-zinc-950 font-medium text-[0.95rem] transition-colors hover:text-accent;
+  }
+  .nav-link-hover::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+  .nav-link-hover:hover::after {
+    @apply w-full;
+  }
+</style>
+
+<script>
+  // 1. Logo Metric Animation
   const logoMetric = document.querySelector('.logo-metric');
-  if (logoMetric instanceof HTMLElement) {
+  if (logoMetric) {
     setInterval(() => {
-      const matches = logoMetric.textContent?.match(/\d+/);
-      if (matches) {
-        const currentValue = parseInt(matches[0]);
-        const variation = Math.floor(Math.random() * 10) - 5;
-        const newValue = Math.max(300, Math.min(400, currentValue + variation));
-        logoMetric.textContent = `↑ ${newValue}%`;
-      }
+      const val = parseInt(logoMetric.textContent.replace(/\D/g, ''));
+      const next = Math.max(300, Math.min(400, val + (Math.floor(Math.random() * 11) - 5)));
+      logoMetric.textContent = `↑ ${next}%`;
     }, 5000);
   }
 
-  // Initialize desktop dropdown menu
-  createDropdown('[data-dropdown]');
+  // 2. Mobile Menu Logic
+  const btnOpen = document.querySelector('[data-mobile-menu-toggle]');
+  const btnClose = document.querySelector('[data-mobile-menu-close]');
+  const overlay = document.querySelector('[data-mobile-overlay]');
+  const panel = document.querySelector('[data-mobile-panel]');
 
-        // Close on Escape key
-        document.addEventListener("keydown", (e) => {
-            if (
-                e.key === "Escape" &&
-                trigger?.getAttribute("aria-expanded") === "true"
-            ) {
-                if (closeTimeout) clearTimeout(closeTimeout);
-                closeDropdown();
-                (trigger as HTMLElement)?.focus();
-            }
-        });
-    }
-  // Initialize mobile menu
-  createMobileMenu();
+  function toggleMenu(isOpen: boolean) {
+    if (!overlay || !panel) return;
+    overlay.classList.toggle('hidden', !isOpen);
+    setTimeout(() => overlay?.classList.toggle('opacity-100', isOpen), 10);
+    panel.classList.toggle('translate-x-full', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  btnOpen?.addEventListener('click', () => toggleMenu(true));
+  btnClose?.addEventListener('click', () => toggleMenu(false));
+  overlay?.addEventListener('click', () => toggleMenu(false));
 </script>

@@ -1,4 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-accent: #660000;
+}
 @config "../../tailwind.config.mjs";
 
 @theme {
