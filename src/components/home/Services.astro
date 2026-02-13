@@ -1,337 +1,177 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
+import SectionHeader from '../ui/SectionHeader.astro';
+import ServiceCard from '../ui/ServiceCard.astro';
 ---
 
 <section id="uslugi" class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
   <div class="max-w-[1400px] mx-auto mb-16">
-    <SectionHeader
-      label="CO ROBIMY?"
-      title="Kompleksowe rozwiązania SEO<br />dla e-commerce"
-    />
+    <SectionHeader label="CO ROBIMY?" title="Kompleksowe rozwiązania SEO <br>dla e-commerce" />
   </div>
 
-  <div
-    class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-  >
-    <!-- Card 1 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <ServiceCard
+      number="01"
+      title="Techniczne SEO dla sklepów internetowych"
+      description="Zapewniamy zaawansowane techniczne SEO dla sklepów internetowych i platform e-commerce, wspierające indeksację i wzrost widoczności."
+      features={[
+        'Audyt techniczny SEO sklepu',
+        'Struktura URL-i i linkowanie wewnętrzne',
+        'Optymalizacja wydajności i Core Web Vitals',
+        'Optymalizacja indeksacji i crawl budgetu',
+        'Dane strukturalne i wyniki rozszerzone',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">01</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        aria-hidden="true"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Techniczne SEO dla sklepów internetowych
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Zapewniamy zaawansowane techniczne SEO dla sklepów internetowych i
-        platform e-commerce wspierające indeksację i wzrost widoczności.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Audyt techniczny SEO sklepu
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Optymalizacja indeksacji i crawl budgetu
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Optymalizacja wydajności i Core Web Vitals
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Struktura URL-i i linkowanie wewnętrzne
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Dane strukturalne i wyniki rozszerzone
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          aria-hidden="true"
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path
-            d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4"
-          ></path>
-        </svg>
-      </div>
-    </div>
+        <path
+          d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4"
+        ></path>
+      </svg>
+    </ServiceCard>
 
-    <!-- Card 2 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+    <ServiceCard
+      number="02"
+      title="Content SEO dla e-commerce"
+      description="Tworzymy architekturę treści SEO opartą na analizie intencji wyszukiwania, która zwiększa widoczność i sprzedaż."
+      features={[
+        'Analiza potencjału i dobór fraz',
+        'Semantyczne mapowanie fraz',
+        'Projektowanie struktury kategorii',
+        'Tworzenie i optymalizacja treści SEO',
+        'Automatyzacje AI i skalowanie contentu',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">02</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Content Strategy
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Tworzymy treści, które rankują i konwertują. Oparte na search intent.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Keyword research
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Content planning
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          SEO copywriting
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Content optimization
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-          ></path><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"></path>
-        </svg>
-      </div>
-    </div>
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path
+          d="M14 2v6h6M16 13H8M16 17H8M10 9H8"></path>
+      </svg>
+    </ServiceCard>
 
-    <!-- Card 3 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+    <ServiceCard
+      number="03"
+      title="Migracje sklepów internetowych"
+      description="Przeprowadzamy migracje sklepów internetowych z zachowaniem widoczności SEO, struktury ruchu i ciągłości sprzedaży."
+      features={[
+        'Analiza przedmigracyjna SEO i danych',
+        'Mapowanie URL-i i przekierowania 301',
+        'Projektowanie struktury nowego sklepu',
+        'Migracja treści, kategorii i produktów',
+        'Monitoring i optymalizacja po migracji',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">03</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Link Building
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Budujemy autorytet domeny przez white-hat outreach i PR cyfrowy.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Link profile analysis
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Digital PR
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Content partnerships
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Backlink monitoring
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path>
-        </svg>
-      </div>
-    </div>
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path
+          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </ServiceCard>
 
-    <!-- Card 4 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+    <ServiceCard
+      number="04"
+      title="Monitorowanie wydajności i jakości serwisu"
+      description="Monitorujemy wydajność sklepów na podstawie danych od realnych użytkowników. Identyfikujemy problemy SEO i UX."
+      features={[
+        'RUM – Real User Monitoring',
+        'Monitoring Core Web Vitals',
+        'Analiza wydajności na poziomie użytkownika',
+        'Wykrywanie problemów wydajnościowych i regresji',
+        'Raportowanie rekomendacje optymalizacyjne',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">04</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Analytics & Raportowanie
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Mierzymy wszystko. Dostarczamy raporty, które pokazują realny wpływ SEO na biznes.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          GA4 & GSC setup
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Custom dashboards
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          ROI tracking
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Miesięczne raporty
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path d="M18 20V10M12 20V4M6 20v-6"></path>
-        </svg>
-      </div>
-    </div>
+        <path d="M18 20V10M12 20V4M6 20v-6"></path>
+      </svg>
+    </ServiceCard>
 
-    <!-- Card 5 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+    <ServiceCard
+      number="05"
+      title="Link building i autorytet domeny"
+      description="Budujemy autorytet sklepów poprzez jakościowe linkowanie i sygnały zewnętrzne, wspierające wzrost widoczności w SERP-ach."
+      features={[
+        'Analiza profilu linków własnych i konkurencji',
+        'Opracowanie strategii link buildingu',
+        'Pozyskiwanie linków kontekstowych i contentowych',
+        'Budowanie linków brandowych',
+        'Oczyszczanie profilu linków',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">05</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Optymalizacja Konwersji
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Ruch to nie wszystko. Optymalizujemy ścieżki użytkowników dla lepszych wyników.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          UX audit
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          A/B testing
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Landing page optimization
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Heatmaps & recordings
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path d="M12 20V10M18 20V4M6 20v-4"></path>
-          <circle cx="12" cy="6" r="2"></circle>
-        </svg>
-      </div>
-    </div>
+        <path d="M12 20V10M18 20V4M6 20v-4"></path>
+        <circle cx="12" cy="6" r="2"></circle>
+      </svg>
+    </ServiceCard>
 
-    <!-- Card 6 -->
-    <div
-      class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-12 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group"
+    <ServiceCard
+      number="06"
+      title="Analityka SEO i automatyzacja AI"
+      description="Wspieramy decyzje SEO danymi analitycznymi z zakresu prognozowania wzrostu widoczności i sprzedaży z ruchu organicznego."
+      features={[
+        'Analityka SEO dla e-commerce',
+        'Konfiguracji i audyty GA4 i GSC',
+        'Segmentacja danych SEO (kategorie, produkty, intencje)',
+        'Prognozowanie potencjału wzrostów i konwersji',
+        'Automatyzacja AI, dashboardy SEO i raporty decyzyjne',
+      ]}
+      link="#"
     >
-      <div class="font-mono text-[0.85rem] font-bold text-accent mb-6">06</div>
-      <h3
-        class="font-display text-[1.5rem] lg:text-[1.75rem] font-bold mb-4 leading-[1.3]"
+      <svg
+        slot="icon"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
       >
-        Local SEO
-      </h3>
-      <p class="text-gray-600 mb-8 leading-[1.7] text-[0.95rem]">
-        Dominuj w Mapach Google i lokalnych wynikach wyszukiwania.
-      </p>
-      <ul class="list-none mb-8 space-y-3">
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          GMB optimization
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Local citations
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem] border-b border-gray-100 pb-2"
-        >
-          Review management
-        </li>
-        <li
-          class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-accent before:font-semibold text-gray-700 text-[0.9rem]"
-        >
-          Lokalna strategia
-        </li>
-      </ul>
-      <div
-        class="absolute top-8 right-8 lg:top-12 lg:right-12 text-gray-200 transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:rotate-6"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-        >
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-          ></path><circle cx="12" cy="10" r="3"></circle>
-        </svg>
-      </div>
-    </div>
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle
+          cx="12"
+          cy="10"
+          r="3"></circle>
+      </svg>
+    </ServiceCard>
   </div>
 </section>
