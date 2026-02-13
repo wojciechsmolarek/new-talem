@@ -1,0 +1,26 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  centered?: boolean;
+  light?: boolean;
+}
+
+const { label, title, centered = false, light = false } = Astro.props;
+---
+
+<div class:list={[centered && "text-center"]}>
+  <span
+    class="font-mono text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-accent mb-4 block"
+  >
+    {label}
+  </span>
+  <h2
+    class:list={[
+      "font-display font-black leading-[1.15] tracking-[-0.02em]",
+      "text-[2rem] lg:text-[3.5rem]",
+      light ? "text-white" : "text-black",
+    ]}
+    set:html={title}
+  />
+</div>

@@ -1,0 +1,139 @@
+---
+import CheckItem from "./CheckItem.astro";
+
+interface Props {
+  id?: string;
+  title: string;
+  description: string;
+  background?: "white" | "gray";
+  checkItems?: string[];
+}
+
+const {
+  id,
+  title,
+  description,
+  background = "white",
+  checkItems = ["Odpowiedź w 24h", "Bezpłatny audyt", "Bez zobowiązań"],
+} = Astro.props;
+
+const bgClass = background === "gray" ? "bg-gray-100" : "bg-white";
+const checkBgClass =
+  background === "gray"
+    ? "bg-white/50 border border-gray-200"
+    : "bg-gray-50 border border-gray-100";
+---
+
+<section id={id} class:list={[bgClass, "px-4 sm:px-6 lg:px-8 py-24 lg:py-32"]}>
+  <div class="max-w-[800px] mx-auto">
+    <div class="text-center mb-16">
+      <h2
+        class="font-display text-[2.5rem] lg:text-[4rem] font-black mb-6 leading-[1.2] text-balance"
+      >
+        {title}
+      </h2>
+      <p
+        class="text-[1rem] lg:text-[1.125rem] text-gray-500 leading-[1.8] max-w-[700px] mx-auto"
+      >
+        {description}
+      </p>
+    </div>
+
+    <form
+      class="flex flex-col gap-5"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value={import.meta.env.PUBLIC_WEB3FORMS_KEY}
+      />
+
+      <div class="w-full">
+        <input
+          type="text"
+          name="name"
+          autocomplete="name"
+          placeholder="Twoje imię"
+          required
+          class="w-full px-6 py-5 border-2 border-gray-300 rounded-xl text-base font-body transition-all bg-white outline-none focus:border-accent"
+        />
+      </div>
+      <div class="w-full">
+        <input
+          type="email"
+          name="email"
+          autocomplete="email"
+          placeholder="Email"
+          required
+          class="w-full px-6 py-5 border-2 border-gray-300 rounded-xl text-base font-body transition-all bg-white outline-none focus:border-accent"
+        />
+      </div>
+      <div class="w-full">
+        <input
+          type="url"
+          name="website"
+          autocomplete="url"
+          placeholder="URL Twojej strony"
+          required
+          class="w-full px-6 py-5 border-2 border-gray-300 rounded-xl text-base font-body transition-all bg-white outline-none focus:border-accent"
+        />
+      </div>
+      <div class="w-full relative">
+        <select
+          name="budget"
+          required
+          class="w-full px-6 py-5 border-2 border-gray-300 rounded-xl text-base font-body transition-all bg-white outline-none focus:border-accent appearance-none pr-12 cursor-pointer"
+        >
+          <option value="">Miesięczny budżet na działania SEO</option>
+          <option value="5-10k">5-10k PLN</option>
+          <option value="10-20k">10-20k PLN</option>
+          <option value="20-50k">20-50k PLN</option>
+          <option value="50k+">50k+ PLN</option>
+        </select>
+        <div
+          class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500"
+        >
+          <svg
+            aria-hidden="true"
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M1 1L6 6L11 1" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="mt-4 flex items-center justify-center gap-3 px-8 py-5 rounded-xl font-bold transition-all duration-300 text-lg bg-black text-white hover:bg-accent hover:-translate-y-1 hover:shadow-2xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+      >
+        Wyślij zapytanie
+        <svg
+          aria-hidden="true"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </form>
+
+    <div
+      class:list={[
+        "flex flex-wrap justify-center gap-6 lg:gap-12 mt-12 p-6 rounded-2xl",
+        checkBgClass,
+      ]}
+    >
+      {checkItems.map((item) => <CheckItem text={item} />)}
+    </div>
+  </div>
+</section>

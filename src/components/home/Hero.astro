@@ -53,8 +53,8 @@
           </div>
           <div class="flex items-baseline">
             <div
-              class="metric-value font-mono text-[3.5rem] font-bold leading-none text-black"
-              data-target="249"
+              class="font-mono text-[3.5rem] font-bold leading-none text-black"
+              data-count-to="249"
             >
               0
             </div>
@@ -102,10 +102,10 @@
           </div>
           <div class="flex items-baseline">
             <div
-              class="metric-value font-mono text-[3.5rem] font-bold leading-none text-black"
-              data-target="1847"
+              class="font-mono text-[3.5rem] font-bold leading-none text-black"
+              data-count-to="1847"
             >
-              1847
+              0
             </div>
             <div class="font-mono text-[2rem] font-bold text-accent ml-1">
               +
@@ -166,8 +166,8 @@
           </div>
           <div class="flex items-baseline">
             <div
-              class="metric-value font-mono text-[3.5rem] font-bold leading-none text-black"
-              data-target="20"
+              class="font-mono text-[3.5rem] font-bold leading-none text-black"
+              data-count-to="20"
             >
               0
             </div>
@@ -194,39 +194,3 @@
   </div>
 </section>
 
-<script>
-  // Intersection Observer for number animation
-  const animateNumbers = (
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
-  ) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target as HTMLElement;
-        const countTo = parseInt(target.getAttribute("data-target") || "0");
-        let count = 0;
-        const duration = 2000;
-        const increment = countTo / (duration / 16);
-
-        const updateCount = () => {
-          count += increment;
-          if (count < countTo) {
-            target.innerText = Math.floor(count).toString();
-            requestAnimationFrame(updateCount);
-          } else {
-            target.innerText = countTo.toString();
-          }
-        };
-        updateCount();
-        observer.unobserve(target);
-      }
-    });
-  };
-
-  const numberObserver = new IntersectionObserver(animateNumbers, {
-    threshold: 0.1,
-  });
-  document
-    .querySelectorAll(".metric-value")
-    .forEach((el) => numberObserver.observe(el));
-</script>

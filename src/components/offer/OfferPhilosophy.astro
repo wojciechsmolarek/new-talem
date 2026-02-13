@@ -1,18 +1,15 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
 <section class="bg-white px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
   <div class="max-w-[1400px] mx-auto">
     <!-- Header -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-20">
-      <div>
-        <span
-          class="font-mono text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-accent mb-4 block"
-          >FILOZOFIA WSPÓŁPRACY</span
-        >
-        <h2
-          class="font-display text-[2rem] lg:text-[3.5rem] font-black leading-[1.15] tracking-[-0.02em]"
-        >
-          Partnerstwo, nie kolejna faktura.
-        </h2>
-      </div>
+      <SectionHeader
+        label="FILOZOFIA WSPÓŁPRACY"
+        title="Partnerstwo, nie kolejna faktura."
+      />
       <div class="flex items-end">
         <p
           class="text-[0.95rem] lg:text-[1.05rem] leading-[1.8] text-gray-600 max-w-[520px]"

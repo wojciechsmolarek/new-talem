@@ -1,0 +1,24 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="flex items-center gap-2 text-gray-700 font-medium text-[0.9rem]">
+  <svg
+    aria-hidden="true"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.5"
+    class="text-accent flex-shrink-0"
+  >
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round"></path>
+    <path d="M22 4L12 14.01l-3-3" stroke-linecap="round"></path>
+  </svg>
+  <span>{text}</span>
+</div>

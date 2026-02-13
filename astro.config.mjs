@@ -1,15 +1,13 @@
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://talem.eu',
   output: 'static',
-  vite: {
-    plugins: [tailwindcss()],
-  },
   integrations: [
+    tailwind(),
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,

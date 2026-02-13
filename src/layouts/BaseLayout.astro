@@ -126,5 +126,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <slot />
+    <script>
+      import "../scripts/scroll-reveal";
+    </script>
   </body>
 </html>

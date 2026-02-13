@@ -1,11 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-accent: #660000;
-}
-@config "../../tailwind.config.mjs";
-
-@theme {
+:root {
   --color-black: #0a0a0a;
   --color-white: #ffffff;
   --color-gray-100: #f5f5f5;
@@ -24,46 +21,46 @@
 
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
   }
 
-  @keyframes growUp {
-    from {
-      opacity: 0;
-      height: 0;
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    to {
-      opacity: 1;
-    }
+@keyframes growUp {
+  from {
+    opacity: 0;
+    height: 0;
   }
 
-  @keyframes drawLine {
-    to {
-      stroke-dashoffset: 0;
-    }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseSlide {
+
+  0%,
+  100% {
+    left: -100%;
   }
 
-  @keyframes pulseSlide {
-
-    0%,
-    100% {
-      left: -100%;
-    }
-
-    50% {
-      left: 100%;
-    }
+  50% {
+    left: 100%;
   }
 }
 

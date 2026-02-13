@@ -1,24 +1,24 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
 <section
   id="proces"
   class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32"
 >
   <div class="max-w-[1000px] mx-auto">
     <div class="mb-16">
-      <span
-        class="font-mono text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-accent mb-4 block"
-        >JAK DZIAŁAMY</span
-      >
-      <h2
-        class="font-display text-[2.5rem] lg:text-[4rem] font-black leading-[1.2] tracking-[-0.02em]"
-      >
-        Sprawdzony proces,<br />mierzalne rezultaty
-      </h2>
+      <SectionHeader
+        label="JAK DZIAŁAMY"
+        title="Sprawdzony proces,<br />mierzalne rezultaty"
+      />
     </div>
 
     <div class="flex flex-col gap-0">
       <!-- Step 1 -->
       <div
-        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+        class="flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300"
+        data-reveal="slide-left"
       >
         <div class="flex items-center gap-4 flex-shrink-0">
           <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">01</span>
@@ -39,7 +39,8 @@
 
       <!-- Step 2 -->
       <div
-        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+        class="flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300"
+        data-reveal="slide-left"
       >
         <div class="flex items-center gap-4 flex-shrink-0">
           <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">02</span>
@@ -60,7 +61,8 @@
 
       <!-- Step 3 -->
       <div
-        class="process-step flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300 opacity-0 translate-x-[-20px]"
+        class="flex items-start gap-6 lg:gap-10 py-10 border-b border-gray-300"
+        data-reveal="slide-left"
       >
         <div class="flex items-center gap-4 flex-shrink-0">
           <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">03</span>
@@ -81,7 +83,8 @@
 
       <!-- Step 4 -->
       <div
-        class="process-step flex items-start gap-6 lg:gap-10 py-10 opacity-0 translate-x-[-20px]"
+        class="flex items-start gap-6 lg:gap-10 py-10"
+        data-reveal="slide-left"
       >
         <div class="flex items-center gap-4 flex-shrink-0">
           <span class="font-display text-[2.5rem] lg:text-[3.5rem] font-black text-accent leading-none italic">04</span>
@@ -103,23 +106,3 @@
   </div>
 </section>
 
-<script>
-  const revealSteps = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target as HTMLElement;
-        target.style.opacity = "1";
-        target.style.transform = "translateX(0)";
-      }
-    });
-  };
-
-  const stepObserver = new IntersectionObserver(revealSteps, {
-    threshold: 0.1,
-  });
-  document.querySelectorAll(".process-step").forEach((el) => {
-    (el as HTMLElement).style.transition =
-      "all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)";
-    stepObserver.observe(el);
-  });
-</script>
