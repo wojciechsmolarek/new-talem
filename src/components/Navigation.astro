@@ -1,5 +1,5 @@
 <nav
-    class="fixed top-0 left-0 w-full z-[1000] bg-white/95 backdrop-blur-[10px] border-b border-gray-200"
+  class="fixed top-0 left-0 w-full z-[1000] bg-white/95 backdrop-blur-[10px] border-b border-gray-200"
 >
     <div
         class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center"
@@ -306,7 +306,59 @@
                 </svg>
             </button>
         </div>
+      </div>
+      <a
+        href="#wyniki"
+        class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
+        >Wyniki</a
+      >
+      <a
+        href="#proces"
+        class="relative no-underline text-black font-medium text-[0.95rem] transition-colors hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-1"
+        >Proces</a
+      >
+      <a
+        href="#kontakt"
+        class="flex items-center gap-2 px-6 py-[0.65rem] bg-accent text-white rounded-full font-semibold transition-all hover:bg-black hover:shadow-xl group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent"
+        >Bezpłatna Analiza</a
+      >
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      data-mobile-menu-button
+      class="md:hidden text-black p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+      aria-label="Otwórz menu nawigacji"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg
+        data-menu-icon
+        aria-hidden="true"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        data-close-icon
+        aria-hidden="true"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="hidden"
+      >
+        <path d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
 </nav>
 
 <script>
@@ -326,14 +378,27 @@
             }
         }, 5000);
     }
+<!-- Mobile Menu Overlay -->
+<div
+  data-mobile-menu-overlay
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+  aria-hidden="true"
+>
+</div>
 
-    // Dropdown menu logic
-    const dropdown = document.querySelector("[data-dropdown]");
-    if (dropdown) {
-        const trigger = dropdown.querySelector(".nav-dropdown-trigger");
-        const menu = dropdown.querySelector(".nav-dropdown-menu");
-        const chevron = dropdown.querySelector(".nav-dropdown-chevron");
-        let closeTimeout: ReturnType<typeof setTimeout> | null = null;
+<!-- Mobile Menu Panel -->
+<div
+  data-mobile-menu
+  id="mobile-menu"
+  class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[1000] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto shadow-2xl"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menu nawigacji"
+>
+  <div class="p-6">
+    <div class="flex justify-between items-center mb-8">
+      <span class="font-display text-2xl font-black text-black">Menu</span>
+    </div>
 
         function openDropdown() {
             if (closeTimeout) {
@@ -378,20 +443,118 @@
                 }
             }, 120);
         }
+    <nav class="flex flex-col gap-2">
+      <!-- Mobile Services Accordion -->
+      <div class="border-b border-gray-200 pb-2">
+        <button
+          data-mobile-services-toggle
+          class="w-full flex items-center justify-between text-lg font-semibold text-black hover:text-accent transition-colors py-3 bg-transparent border-none cursor-pointer"
+          aria-expanded="false"
+        >
+          <span>Usługi</span>
+          <svg
+            data-mobile-services-chevron
+            class="w-5 h-5 transition-transform duration-200"
+            viewBox="0 0 12 12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 4.5L6 7.5L9 4.5"></path>
+          </svg>
+        </button>
+        <div
+          data-mobile-services-menu
+          class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+        >
+          <div class="pl-4 py-2 flex flex-col gap-3">
+            <a
+              href="/seo-dla-e-commerce"
+              class="text-base font-medium text-accent hover:text-black transition-colors py-1"
+            >
+              SEO dla E-commerce
+            </a>
+            <a
+              href="/seo-dla-e-commerce#techniczne-seo"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              Techniczne SEO
+            </a>
+            <a
+              href="/seo-dla-e-commerce#content-marketing"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              Content Marketing
+            </a>
+            <a
+              href="/seo-dla-e-commerce#ai-automatyzacja"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              AI & Automatyzacja
+            </a>
+            <a
+              href="/seo-dla-e-commerce#strategia"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              Strategia SEO/AI
+            </a>
+            <a
+              href="/seo-dla-e-commerce#migracje"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              Migracje Sklepow
+            </a>
+            <a
+              href="/seo-dla-e-commerce#rum-testy"
+              class="text-sm text-gray-700 hover:text-accent transition-colors py-1"
+            >
+              RUM Testy
+            </a>
+          </div>
+        </div>
+      </div>
 
-        dropdown.addEventListener("mouseenter", openDropdown);
-        dropdown.addEventListener("mouseleave", closeDropdown);
+      <a
+        href="#wyniki"
+        class="text-lg font-semibold text-black hover:text-accent transition-colors py-3 border-b border-gray-200"
+        >Wyniki</a
+      >
+      <a
+        href="#proces"
+        class="text-lg font-semibold text-black hover:text-accent transition-colors py-3 border-b border-gray-200"
+        >Proces</a
+      >
+      <a
+        href="#kontakt"
+        class="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white rounded-full font-semibold transition-all hover:bg-black mt-6 shadow-lg"
+        >Bezpłatna Analiza</a
+      >
+    </nav>
+  </div>
+</div>
 
-        // Also support click for touch devices
-        trigger?.addEventListener("click", () => {
-            const isOpen = trigger.getAttribute("aria-expanded") === "true";
-            if (isOpen) {
-                if (closeTimeout) clearTimeout(closeTimeout);
-                closeDropdown();
-            } else {
-                openDropdown();
-            }
-        });
+<script>
+  import { createDropdown } from '../utils/dropdown';
+  import { createMobileMenu } from '../utils/mobileMenu';
+
+  // Dynamic logo metric functionality
+  const logoMetric = document.querySelector('.logo-metric');
+  if (logoMetric instanceof HTMLElement) {
+    setInterval(() => {
+      const matches = logoMetric.textContent?.match(/\d+/);
+      if (matches) {
+        const currentValue = parseInt(matches[0]);
+        const variation = Math.floor(Math.random() * 10) - 5;
+        const newValue = Math.max(300, Math.min(400, currentValue + variation));
+        logoMetric.textContent = `↑ ${newValue}%`;
+      }
+    }, 5000);
+  }
+
+  // Initialize desktop dropdown menu
+  createDropdown('[data-dropdown]');
 
         // Close on Escape key
         document.addEventListener("keydown", (e) => {
@@ -405,4 +568,6 @@
             }
         });
     }
+  // Initialize mobile menu
+  createMobileMenu();
 </script>
