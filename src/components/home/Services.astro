@@ -6,19 +6,25 @@ import ServiceCard from '../ui/ServiceCard.astro';
 <section id="uslugi" class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
   <div class="max-w-[1400px] mx-auto mb-16">
     <SectionHeader label="CO ROBIMY?" title="Kompleksowe rozwiązania SEO <br>dla e-commerce" />
+    <p class="mt-8 text-[1.125rem] lg:text-[1.25rem] leading-[1.8] text-gray-600">
+      Integrujemy wszystkie obszary SEO, aby Twój sklep rozwijał się stabilnie i przewidywalnie – od
+      technicznych fundamentów serwisu, przez treści i autorytet domeny, po analitykę oraz
+      automatyzację. Nasze działania są praktyczne, skuteczne i mają bezpośredni wpływ na
+      widoczność, ruch oraz sprzedaż.
+    </p>
   </div>
 
   <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <ServiceCard
       number="01"
-      title="Techniczne SEO dla sklepów internetowych"
-      description="Zapewniamy zaawansowane techniczne SEO dla sklepów internetowych i platform e-commerce, wspierające indeksację i wzrost widoczności."
+      title="Techniczne SEO dla serwisów i sklepów internetowych"
+      description="Zapewniamy zaawansowane techniczne SEO dla  sklepów internetowych i platform e-commerce wspierające indeksację i wzrost widoczności."
       features={[
-        'Audyt techniczny SEO sklepu',
-        'Struktura URL-i i linkowanie wewnętrzne',
-        'Optymalizacja wydajności i Core Web Vitals',
-        'Optymalizacja indeksacji i crawl budgetu',
-        'Dane strukturalne i wyniki rozszerzone',
+        'Optymalizacja architektury SEO witryny',
+        'Optymalizacja indeksacji i zarządzanie crawl budgetem',
+        'Optymalizacja wydajności i parametrów Core Web Vitals',
+        'Implementacja danych strukturalnych',
+        'Optymalizacja pod wyniki rozszerzone',
       ]}
       link="#"
     >
@@ -50,13 +56,13 @@ import ServiceCard from '../ui/ServiceCard.astro';
     <ServiceCard
       number="02"
       title="Content SEO dla e-commerce"
-      description="Tworzymy architekturę treści SEO opartą na analizie intencji wyszukiwania, która zwiększa widoczność i sprzedaż."
+      description="Tworzymy wartościowe treści SEO, oparte na analizie intencji wyszukiwania i potrzeb klientów, które zwiększają widoczność i sprzedaż."
       features={[
-        'Analiza potencjału i dobór fraz',
-        'Semantyczne mapowanie fraz',
-        'Projektowanie struktury kategorii',
-        'Tworzenie i optymalizacja treści SEO',
-        'Automatyzacje AI i skalowanie contentu',
+        'Badanie i dobór fraz kluczowych',
+        'Analiza intencji wyszukiwania',
+        'Projektowanie strategii treści i architektury tematycznej',
+        'Mapowanie fraz do kategorii i podstron',
+        'Tworzenie i optymalizacja semantyczna treści',
       ]}
       link="#"
     >
@@ -85,11 +91,11 @@ import ServiceCard from '../ui/ServiceCard.astro';
       title="Migracje sklepów internetowych"
       description="Przeprowadzamy migracje sklepów internetowych z zachowaniem widoczności SEO, struktury ruchu i ciągłości sprzedaży."
       features={[
-        'Analiza przedmigracyjna SEO i danych',
-        'Mapowanie URL-i i przekierowania 301',
-        'Projektowanie struktury nowego sklepu',
-        'Migracja treści, kategorii i produktów',
-        'Monitoring i optymalizacja po migracji',
+        'Analiza danych i planowanie strategii migracji',
+        'Projektowanie architektury SEO nowego sklepu',
+        'Mapowanie adresów URL i wdrażanie przekierowań 301',
+        'Migracja struktury serwisu, kategorii i treści',
+        'Monitoring widoczności i optymalizacja SEO po migracji',
       ]}
       link="#"
     >
@@ -114,14 +120,14 @@ import ServiceCard from '../ui/ServiceCard.astro';
 
     <ServiceCard
       number="04"
-      title="Monitorowanie wydajności i jakości serwisu"
-      description="Monitorujemy wydajność sklepów na podstawie danych od realnych użytkowników. Identyfikujemy problemy SEO i UX."
+      title="Monitoring jakości i wydajności"
+      description="Monitorujemy wydajność sklepów w oparciu o dane rzeczywistych użytkowników i identyfikujemy problemy wpływające na SEO i UX."
       features={[
-        'RUM – Real User Monitoring',
-        'Monitoring Core Web Vitals',
+        'Monitoring Core Web Vitals (CWV)',
+        'Monitoring wydajności i czasu ładowania',
+        'Monitoring wydajności w oparciu o dane użytkowników (RUM)',
         'Analiza wydajności na poziomie użytkownika',
-        'Wykrywanie problemów wydajnościowych i regresji',
-        'Raportowanie rekomendacje optymalizacyjne',
+        'Raportowanie i rekomendacje optymalizacyjne',
       ]}
       link="#"
     >
@@ -145,44 +151,14 @@ import ServiceCard from '../ui/ServiceCard.astro';
 
     <ServiceCard
       number="05"
-      title="Link building i autorytet domeny"
-      description="Budujemy autorytet sklepów poprzez jakościowe linkowanie i sygnały zewnętrzne, wspierające wzrost widoczności w SERP-ach."
-      features={[
-        'Analiza profilu linków własnych i konkurencji',
-        'Opracowanie strategii link buildingu',
-        'Pozyskiwanie linków kontekstowych i contentowych',
-        'Budowanie linków brandowych',
-        'Oczyszczanie profilu linków',
-      ]}
-      link="#"
-    >
-      <svg
-        slot="icon"
-        aria-hidden="true"
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
-    </ServiceCard>
-
-    <ServiceCard
-      number="06"
-      title="Analityka SEO i automatyzacja AI"
-      description="Wspieramy decyzje SEO danymi analitycznymi z zakresu prognozowania wzrostu widoczności i sprzedaży z ruchu organicznego."
+      title="Analityka SEO i automatyzacja oparta na AI"
+      description="Opieramy SEO na danych, pomagając przewidywać i skalować wzrost widoczności oraz przychodów z ruchu organicznego."
       features={[
         'Analityka SEO dla e-commerce',
-        'Konfiguracji i audyty GA4 i GSC',
-        'Segmentacja danych SEO (kategorie, produkty, intencje)',
-        'Prognozowanie potencjału wzrostów i konwersji',
-        'Automatyzacja AI, dashboardy SEO i raporty decyzyjne',
+        'Konfiguracja, weryfikacja i audyty GA4 oraz GSC',
+        'Segmentacja i modelowanie danych SEO',
+        'Prognozowanie potencjału wzrostu widoczności i sprzedaży',
+        'Automatyzacja analiz SEO oraz dashboardy i raporty decyzyjne',
       ]}
       link="#"
     >
@@ -201,6 +177,36 @@ import ServiceCard from '../ui/ServiceCard.astro';
         <line x1="12" y1="20" x2="12" y2="10"></line>
         <line x1="18" y1="20" x2="18" y2="4"></line>
         <line x1="6" y1="20" x2="6" y2="16"></line>
+      </svg>
+    </ServiceCard>
+
+    <ServiceCard
+      number="06"
+      title="Link building i autorytet domeny"
+      description="Budujemy autorytet sklepów dzięki wartościowym linkom i sygnałom zewnętrznym, wspierając stabilny wzrost widoczności w wyszukiwarkach."
+      features={[
+        'Audyt i analiza profilu linków własnych oraz konkurencji',
+        'Opracowywanie strategii link buildingu',
+        'Pozyskiwanie linków kontekstowych i treściowych',
+        'Budowanie linków brandowych i autorytetu domeny',
+        'Oczyszczanie i optymalizacja profilu linków',
+      ]}
+      link="#"
+    >
+      <svg
+        slot="icon"
+        aria-hidden="true"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
       </svg>
     </ServiceCard>
   </div>

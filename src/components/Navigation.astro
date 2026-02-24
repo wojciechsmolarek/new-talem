@@ -2,40 +2,40 @@
 // Dane nawigacji - łatwe zarządzanie w jednym miejscu
 const services = [
   {
-    href: '/seo-dla-e-commerce#techniczne-seo',
+    href: '/#',
     title: 'Techniczne SEO',
-    desc: 'Wydajność, Core Web Vitals, RUM Testy',
+    desc: 'Dla e-commerce i serwisów internetowych',
     icon: 'code',
   },
   {
-    href: '/seo-dla-e-commerce#content-marketing',
-    title: 'Content Marketing',
-    desc: 'Strategia treści dla sklepów',
+    href: '/#',
+    title: 'Content SEO dla e-commerce',
+    desc: 'Tworzenie wartościowych treści i automatyzacja procesów contentowych',
     icon: 'pen',
   },
   {
-    href: '/seo-dla-e-commerce#ai-automatyzacja',
-    title: 'AI & Automatyzacja',
-    desc: 'Autorskie narzędzia i n8n',
+    href: '/#',
+    title: 'Migracje sklepów',
+    desc: 'Bezpieczne przenoszenie sklepów, bez spadków ruchu i sprzedaży',
     icon: 'cpu',
   },
   {
-    href: '/seo-dla-e-commerce#strategia',
-    title: 'Strategia SEO/AI',
-    desc: 'Budowanie wzrostu e-commerce',
+    href: '/#',
+    title: 'Monitoring wydajności',
+    desc: 'Dla sklepów, platform e-commerce i serwisów WWW',
     icon: 'chart',
   },
   {
-    href: '/seo-dla-e-commerce#migracje',
-    title: 'Migracje Sklepów',
-    desc: 'Bezpieczna zmiana platformy',
+    href: '/#',
+    title: 'Analityka SEO i automatyzacja',
+    desc: 'Modelowanie danych i automatyzacje wspierane przez AI',
     icon: 'move',
   },
   {
-    href: '/seo-dla-e-commerce#rum-testy',
-    title: 'RUM Testy',
-    desc: 'Real User Monitoring',
-    icon: 'clock',
+    href: '/#',
+    title: 'Link Building',
+    desc: 'Budowanie wartościowych linków i zwiększanie autorytetu domeny',
+    icon: 'link',
   },
 ];
 ---
@@ -50,10 +50,6 @@ const services = [
         alt="Talem Technologies Sp. z o. o."
         class="h-10 w-auto transition-transform group-hover:scale-105"
       />
-      <span
-        class="logo-metric font-mono text-[0.7rem] text-accent bg-accent/10 px-2 py-0.5 rounded font-bold"
-        >↑ 347%</span
-      >
     </a>
 
     <div class="hidden min-[885px]:flex gap-8 items-center">
@@ -205,17 +201,7 @@ const services = [
 </style>
 
 <script>
-  // 1. Logo Metric Animation
-  const logoMetric = document.querySelector('.logo-metric');
-  if (logoMetric) {
-    setInterval(() => {
-      const val = parseInt(logoMetric.textContent.replace(/\D/g, ''));
-      const next = Math.max(300, Math.min(400, val + (Math.floor(Math.random() * 11) - 5)));
-      logoMetric.textContent = `↑ ${next}%`;
-    }, 5000);
-  }
-
-  // 2. Mobile Menu Logic
+  // 1. Mobile Menu Logic
   const btnOpen = document.querySelector('[data-mobile-menu-toggle]');
   const btnClose = document.querySelector('[data-mobile-menu-close]');
   const overlay = document.querySelector('[data-mobile-overlay]');
