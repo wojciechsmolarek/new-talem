@@ -1,6 +1,6 @@
 ---
-import "../styles/global.css";
-import SpeedInsights from "@vercel/speed-insights/astro";
+import '../styles/global.css';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
   title?: string;
@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = "TALEM - Agencja SEO | Wzrost Oparty na Danych",
-  description = "Profesjonalna agencja SEO. Zwiększamy widoczność i ruch organiczny. Mierzalne wyniki, transparentne raportowanie.",
+  title = 'TALEM - Agencja SEO | Wzrost Oparty na Danych',
+  description = 'Profesjonalna agencja SEO. Zwiększamy widoczność i ruch organiczny. Mierzalne wyniki, transparentne raportowanie.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -47,14 +47,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.ico" />
-
-    <!-- Font Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Consolidated Schema.org Markup -->
     <script type="application/ld+json">
@@ -129,7 +121,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <slot />
     <SpeedInsights />
     <script>
-      import "../scripts/scroll-reveal";
+      import '../scripts/scroll-reveal';
     </script>
   </body>
 </html>

@@ -25,9 +25,9 @@ export default {
                 },
             },
             fontFamily: {
-                display: ['"Playfair Display"', 'serif'],
-                mono: ['"JetBrains Mono"', 'monospace'],
-                body: ['Manrope', 'sans-serif'],
+                display: ['var(--font-display)', 'serif'],
+                mono: ['var(--font-mono)', 'monospace'],
+                body: ['var(--font-body)', 'sans-serif'],
             },
         },
     },
