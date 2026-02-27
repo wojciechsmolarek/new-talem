@@ -5,37 +5,37 @@ const services = [
     href: '/techniczne-seo',
     title: 'Techniczne SEO',
     desc: 'Dla e-commerce i serwisów internetowych',
-    icon: 'code',
+    icon: '<rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><rect x="9" y="9" width="6" height="6" /><line x1="9" y1="1" x2="9" y2="4" /><line x1="15" y1="1" x2="15" y2="4" /><line x1="9" y1="20" x2="9" y2="23" /><line x1="15" y1="20" x2="15" y2="23" /><line x1="20" y1="9" x2="23" y2="9" /><line x1="20" y1="15" x2="23" y2="15" /><line x1="1" y1="9" x2="4" y2="9" /><line x1="1" y1="15" x2="4" y2="15" />',
   },
   {
     href: '/#',
     title: 'Content SEO',
     desc: 'Tworzenie wartościowych treści i automatyzacja procesów contentowych',
-    icon: 'pen',
+    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><line x1="10" y1="9" x2="8" y2="9" />',
   },
   {
     href: '/#',
     title: 'Migracje sklepów',
     desc: 'Bezpieczne przenoszenie sklepów, bez spadków ruchu i sprzedaży',
-    icon: 'cpu',
+    icon: '<path d="m16 3 4 4-4 4" /><path d="M20 7H4" /><path d="m8 21-4-4 4-4" /><path d="M4 17h16" />',
   },
   {
     href: '/#',
     title: 'Monitoring wydajności',
     desc: 'Dla sklepów, platform e-commerce i serwisów WWW',
-    icon: 'chart',
+    icon: '<path d="M12 20a8 8 0 0 0 8-8V4h-8" /><path d="M12 20a8 8 0 0 1-8-8V4h8" /><path d="M10 10l2 2 4-4" />',
   },
   {
     href: '/#',
     title: 'Link Building',
     desc: 'Budowanie wartościowych linków i zwiększanie autorytetu domeny',
-    icon: 'link',
+    icon: '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />',
   },
   {
     href: '/#',
     title: 'Analityka i automatyzacja',
     desc: 'Modelowanie danych i automatyzacje wspierane przez AI',
-    icon: 'move',
+    icon: '<line x1="12" y1="20" x2="12" y2="10" /><line x1="18" y1="20" x2="18" y2="4" /><line x1="6" y1="20" x2="6" y2="16" />',
   },
 ];
 ---
@@ -95,22 +95,24 @@ const services = [
                     href={service.href}
                     class="flex items-start gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
                   >
-                    <div class="w-8 h-8 rounded bg-accent/5 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                    <div class="w-10 h-10 shrink-0 rounded bg-accent/5 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
                       <svg
-                        class="w-4 h-4"
+                        class="w-5 h-5"
+                        aria-hidden="true"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                      >
-                        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        set:html={service.icon}
+                      />
                     </div>
                     <div>
                       <span class="block text-sm font-bold text-black group-hover/item:text-accent">
                         {service.title}
                       </span>
-                      <span class="block text-[0.7rem] text-gray-500 leading-tight">
+                      <span class="block text-[0.75rem] text-gray-500 leading-snug">
                         {service.desc}
                       </span>
                     </div>
@@ -166,7 +168,20 @@ const services = [
       <div class="grid grid-cols-1 gap-3 mt-3 pl-2">
         {
           services.map((s) => (
-            <a href={s.href} class="text-base text-gray-700">
+            <a href={s.href} class="flex items-center gap-3 text-base text-gray-700 py-1">
+              <div class="w-8 h-8 shrink-0 rounded bg-accent/5 flex items-center justify-center text-accent">
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  set:html={s.icon}
+                />
+              </div>
               {s.title}
             </a>
           ))
