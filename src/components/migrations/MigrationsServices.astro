@@ -1,0 +1,97 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+
+const services = [
+  {
+    number: '01',
+    title: 'Analiza danych i planowanie strategii migracji',
+    description:
+      'Analizujemy aktualną widoczność, ruch organiczny, strukturę adresów URL oraz strony generujące sprzedaż. Identyfikujemy kluczowe podstrony, źródła ruchu i elementy wymagające szczególnej ochrony. Na tej podstawie tworzymy plan działań minimalizujący ryzyko spadków widoczności i utraty przychodów.',
+  },
+  {
+    number: '02',
+    title: 'Projektowanie architektury SEO nowego sklepu',
+    description:
+      'Projektujemy strukturę kategorii, adresów URL oraz logikę linkowania wewnętrznego tak, aby nowy sklep był czytelny dla użytkowników i wyszukiwarek. Dbamy o zachowanie logiki, hierarchii treści i skalowalności serwisu.',
+  },
+  {
+    number: '03',
+    title: 'Weryfikacja techniczna przed migracją',
+    description:
+      'Weryfikujemy nową wersję sklepu jeszcze przed uruchomieniem: strukturę adresów URL, meta dane, indeksację, linkowanie wewnętrzne, wydajność oraz potencjalne błędy techniczne. Dzięki temu minimalizujemy ryzyko spadków widoczności po wdrożeniu nowej struktury.',
+  },
+  {
+    number: '04',
+    title: 'Mapowanie adresów URL i wdrażanie przekierowań 301',
+    description:
+      'Przygotowujemy szczegółową mapę starych i nowych adresów URL, uwzględniając nie tylko strukturę serwisu, ale także podstrony generujące ruch i sprzedaż. Wdrażamy przekierowania (301), które chronią wypracowaną widoczność, moc linków i doświadczenie użytkownika.',
+  },
+  {
+    number: '05',
+    title: 'Przeniesienie treści i elementów SEO',
+    description:
+      'Zapewniamy poprawne przeniesienie treści, metadanych, nagłówków, opisów kategorii i produktów oraz innych elementów wpływających na ranking. Dbamy o zachowanie spójności semantycznej i unikanie utraty wartości SEO.',
+  },
+  {
+    number: '06',
+    title: 'Nadzór wdrożenia nowej struktury',
+    description:
+      'Nadzorujemy proces uruchomienia, weryfikując działanie przekierowań, indeksację, dostępność stron, statusy odpowiedzi serwera (4xx / 5xx) oraz zachowanie robotów wyszukiwarek. Pozwala to wychwycić krytyczne błędy zanim wpłyną na widoczność.',
+  },
+  {
+    number: '07',
+    title: 'Monitoring widoczności i działania po migracji',
+    description:
+      'Po uruchomieniu sklepu monitorujemy indeksację, ruch i pozycje, analizując reakcję wyszukiwarek na nową wersję serwisu. W przypadku spadków szybko identyfikujemy przyczyny i wdrażamy korekty, ograniczając ryzyko strat biznesowych.',
+  },
+];
+---
+
+<section id="uslugi-migracje" class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+  <div class="max-w-[1400px] mx-auto">
+    <!-- Header -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-20">
+      <SectionHeader label="CO ROBIMY" title="Co robimy w ramach<br />migracji sklepu" />
+      <div class="flex items-end">
+        <p class="text-[0.95rem] lg:text-[1.05rem] leading-[1.8] text-gray-600 max-w-[520px]">
+          Dzięki naszym działaniom Twój sklep przechodzi przez migrację bezpiecznie, zachowując
+          widoczność, ruch organiczny i wypracowane pozycje w wyszukiwarkach.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        services.map((service) => (
+          <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-10 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-accent/5 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                <svg
+                  class="w-5 h-5 text-accent group-hover:text-white transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <span class="font-mono text-[0.85rem] font-bold text-gray-400">{service.number}</span>
+            </div>
+
+            <h3 class="font-display text-[1.2rem] lg:text-[1.35rem] font-bold mb-4 leading-[1.3]">
+              {service.title}
+            </h3>
+
+            <p class="text-gray-600 leading-[1.7] text-[0.92rem]">{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
