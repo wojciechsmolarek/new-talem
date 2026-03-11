@@ -1,17 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
 import MigrationsHero from '../components/migrations/MigrationsHero.astro';
 import MigrationsServices from '../components/migrations/MigrationsServices.astro';
 import MigrationsWhyUs from '../components/migrations/MigrationsWhyUs.astro';
 import MigrationsContact from '../components/migrations/MigrationsContact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout 
+<BaseLayout 
   title="Migracje sklepów internetowych | Talem Agency"
   description="Bezpieczna migracja sklepu internetowego bez utraty widoczności i ruchu. Zmiana platformy e-commerce z zachowaniem pozycji SEO i przekierowań 301."
 >
+  <Navigation />
   <MigrationsHero />
   <MigrationsServices />
   <MigrationsWhyUs />
   <MigrationsContact />
-</Layout>
+  <Footer />
+</BaseLayout>
