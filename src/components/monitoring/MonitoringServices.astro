@@ -1,0 +1,90 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+
+const services = [
+  {
+    number: '01',
+    title: 'Parametry Core Web Vitals (CWV)',
+    description:
+      'Śledzimy kluczowe wskaźniki jakości strony (m.in. LCP, CLS, INP), które wpływają na ocenę serwisu przez Google oraz komfort użytkowników.',
+  },
+  {
+    number: '02',
+    title: 'Wydajność i czas ładowania',
+    description:
+      'Analizujemy szybkość działania sklepu, czas odpowiedzi serwera i zasobów strony, identyfikując elementy spowalniające witrynę.',
+  },
+  {
+    number: '03',
+    title: 'Wydajność w oparciu o dane rzeczywistych użytkowników (RUM)',
+    description:
+      'Analizujemy, jak sklep działa w realnych warunkach – na różnych urządzeniach, przeglądarkach i połączeniach internetowych. Sprawdzamy, które elementy strony wpływają na doświadczenia klientów, identyfikując opóźnienia interakcji, problemy wizualne oraz błędy ładowania.',
+  },
+  {
+    number: '04',
+    title: 'Problemy techniczne i anomalie wydajnościowe',
+    description:
+      'Identyfikujemy nagłe spadki szybkości, błędy serwera, problemy z zasobami lub skrypty negatywnie wpływające na działanie sklepu.',
+  },
+  {
+    number: '05',
+    title: 'Stabilność działania strony i dostępność (uptime)',
+    description:
+      'Kontrolujemy, czy sklep działa nieprzerwanie i czy użytkownicy oraz roboty Google nie napotykają przerw w dostępności.',
+  },
+  {
+    number: '06',
+    title: 'Wpływ wydajności na parametry SEO i konwersje',
+    description:
+      'Oceniamy, w jaki sposób szybkość strony oraz problemy techniczne przekładają się na widoczność w Google, zachowania użytkowników i sprzedaż.',
+  },
+];
+---
+
+<section id="uslugi-monitoring" class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+  <div class="max-w-[1400px] mx-auto">
+    <!-- Header -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-20">
+      <SectionHeader label="CO MONITORUJEMY" title="Co monitorujemy<br />i analizujemy" />
+      <div class="flex items-end">
+        <p class="text-[0.95rem] lg:text-[1.05rem] leading-[1.8] text-gray-600 max-w-[520px]">
+          Kompleksowo monitorujemy wydajność i jakość Twojego sklepu, aby wykrywać problemy zanim wpłyną na sprzedaż i widoczność w wyszukiwarkach.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        services.map((service) => (
+          <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 lg:p-10 relative transition-all duration-300 hover:border-accent hover:-translate-y-2 hover:shadow-2xl group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-accent/5 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                <svg
+                  class="w-5 h-5 text-accent group-hover:text-white transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <span class="font-mono text-[0.85rem] font-bold text-gray-400">{service.number}</span>
+            </div>
+
+            <h3 class="font-display text-[1.2rem] lg:text-[1.35rem] font-bold mb-4 leading-[1.3]">
+              {service.title}
+            </h3>
+
+            <p class="text-gray-600 leading-[1.7] text-[0.92rem]">{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

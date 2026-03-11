@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import MonitoringHero from '../components/monitoring/MonitoringHero.astro';
+import MonitoringServices from '../components/monitoring/MonitoringServices.astro';
+import MonitoringWhyUs from '../components/monitoring/MonitoringWhyUs.astro';
+import MonitoringContact from '../components/monitoring/MonitoringContact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Monitoring jakości i wydajności | TALEM"
+  description="Monitorujemy wydajność sklepu internetowego w oparciu o rzeczywiste dane użytkowników. Core Web Vitals, RUM, stabilność i wpływ na SEO oraz konwersje."
+>
+  <Navigation />
+  <MonitoringHero />
+  <MonitoringServices />
+  <MonitoringWhyUs />
+  <MonitoringContact />
+  <Footer />
+</BaseLayout>
