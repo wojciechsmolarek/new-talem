@@ -26,6 +26,30 @@ const additionalServices = [
     description:
       'Sprawdzamy poprawność certyfikatów HTTPS, zabezpieczenia przed spamem i atakami oraz konfigurację serwera, aby strona była bezpieczna i wiarygodna dla użytkowników oraz wyszukiwarek.',
   },
+  {
+    number: '05',
+    title: 'Optymalizacja renderowania i ładowania zasobów',
+    description:
+      'Analizujemy sposób, w jaki przeglądarka pobiera i przetwarza zasoby potrzebne do wyświetlenia strony. Eliminujemy elementy blokujące renderowanie i optymalizujemy kolejność ładowania plików, aby użytkownik jak najszybciej zobaczył treść strony (fonty, kolejności ładowania zasobów, lazy loading obrazów, wideo oraz widgetów, implementacja LQIP, skeleton placeholders dla elementów dynamicznych).',
+  },
+  {
+    number: '06',
+    title: 'Optymalizacja skryptów zewnętrznych i narzędzi analitycznych',
+    description:
+      'Kontrolujemy wpływ zewnętrznych skryptów na wydajność strony. Dzięki temu narzędzia marketingowe i analityczne nie spowalniają działania sklepu. Optymalizujemy działania skryptów zewnętrznych, Google Tag Manager, Google Analytics oraz innych skryptów zewnętrznych tak, aby nie blokowały działania strony.',
+  },
+  {
+    number: '07',
+    title: 'Optymalizacja warstwy sieciowej i serwerowej',
+    description:
+      'Optymalizujemy sposób dostarczania danych z serwera do przeglądarki, aby strona była szybka i stabilna niezależnie od lokalizacji użytkownika: kompresja zasobów (gzip, brotli), konfiguracja protokołów komunikacji (HTTP/2, HTTP/3), optymalizacja połączeń szyfrowanych (TLS / SSL), konfiguracja pamięci podręcznej przeglądarki (cache), wdrażanie sieci dostarczania treści (CDN, np. Cloudflare), optymalizacja ponownego ładowania strony dzięki pamięci przeglądarki (bfcache), wdrażanie mechanizmów przewidywania nawigacji użytkownika (Speculation Rules API.',
+  },
+  {
+    number: '08',
+    title: 'Analiza wydajności sieci i serwera',
+    description:
+      'Analizujemy opóźnienia sieciowe i czas odpowiedzi serwera, aby zidentyfikować wąskie gardła wpływające na szybkość ładowania strony, m.in.: analiza czasu odpowiedzi serwera (TTFB), czasu komunikacji z serwerem (RTT), zależności między opóźnieniami sieci a czasem odpowiedzi serwera, opóźnień sieciowych i jakości połączenia, procesu nawiązywania połączenia (DNS, TCP, TLS).',
+  },
 ];
 ---
 
@@ -35,7 +59,7 @@ const additionalServices = [
     <div class="text-center mb-20">
       <SectionHeader
         label="DODATKOWE DZIAŁANIA"
-        title="Dodatkowe działania techniczne<br />i integracja z innymi obszarami SEO"
+        title="Inne działania techniczne<br />i integracja z obszarami SEO"
         centered
       />
       <p
