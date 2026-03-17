@@ -3,37 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
+import AboutUsContact from '../components/about-us/AboutUsContact.astro';
 
 const currentYear = new Date().getFullYear();
 const foundingYear = 2006;
 const yearsOfExperience = currentYear - foundingYear;
-
-const team = [
-  {
-    name: 'Maciej Kowalski',
-    role: 'CEO & Founder',
-    image: '/images/team/ceo.jpg',
-    bio: 'Od 2006 roku tworzy strategie SEO dla e-commerce. Pasjonat automatyzacji i AI w marketingu.',
-  },
-  {
-    name: 'Anna Nowak',
-    role: 'SEO Manager',
-    image: '/images/team/seo-manager.jpg',
-    bio: 'Specjalistka technicznego SEO z 8-letnim doświadczeniem. Ekspert od audytów i migracji.',
-  },
-  {
-    name: 'Tomasz Wiśniewski',
-    role: 'Tech Lead',
-    image: '/images/team/tech-lead.jpg',
-    bio: 'Łączy programowanie z SEO. Tworzy narzędzia automatyzacji i monitoringu wydajności.',
-  },
-  {
-    name: 'Katarzyna Dąbrowska',
-    role: 'Content Strategist',
-    image: '/images/team/content-specialist.jpg',
-    bio: 'Tworzy strategie contentowe, które konwertują. Specjalistka od analizy intencji wyszukiwań.',
-  },
-];
 
 const values = [
   {
@@ -94,20 +68,17 @@ const funFacts = [
               od 2006 roku</span
             >
           </p>
-          <p
-            class="text-[1.125rem] lg:text-[1.25rem] leading-[1.8] text-gray-600 mb-12 max-w-[650px]"
-          >
-            Nie jesteśmy korporacją z setkami klientów. Jesteśmy zespołem specjalistów, którzy
-            pracują z wybranymi sklepami internetowymi, pomagając im realnie rosnąć w wynikach
-            wyszukiwania.
+          <p class="text-[1.125rem] lg:text-[1.25rem] leading-[1.8] text-gray-600 mb-12 w-full">
+            Talem to butikowa agencja SEO wyspecjalizowana w działaniach dla projektów e-commerce.
+            Świadomie pracujemy z wybraną grupą klientów, ponieważ wierzymy, że skuteczne SEO wymaga
+            czasu, dokładnej analizy i regularnej optymalizacji — a nie masowej obsługi projektów
+            realizowanych według jednego schematu.
+          </p>
+          <p class="text-[1.125rem] lg:text-[1.25rem] leading-[1.8] text-gray-600 mb-12 w-full">
+            Dzięki temu możemy realnie wpływać na rozwój sklepów internetowych i budować ich
+            długoterminową widoczność w Google.
           </p>
           <div class="flex gap-4 flex-wrap">
-            <a
-              href="#zespol"
-              class="inline-flex items-center justify-center min-w-[200px] px-8 py-4 rounded-lg font-semibold transition text-base bg-black text-white border-2 border-black hover:bg-accent hover:text-black hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              Poznaj zespół
-            </a>
             <a
               href="#kontakt"
               class="inline-flex items-center justify-center min-w-[200px] px-8 py-4 rounded-lg font-semibold transition text-base bg-transparent text-black border-2 border-gray-300 hover:border-black hover:bg-black hover:text-white"
@@ -265,51 +236,6 @@ const funFacts = [
               </div>
               <h3 class="font-display text-[1.25rem] font-bold text-black mb-3">{value.title}</h3>
               <p class="text-gray-600 leading-relaxed">{value.desc}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section id="zespol" class="bg-white px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="text-center mb-16" data-reveal>
-        <SectionHeader
-          label="Nasz zespół"
-          title="Ludzie, którzy stoją za <span class='text-accent'>wynikami</span>"
-          centered
-        />
-        <p class="text-[1.125rem] text-gray-600 mt-6 max-w-[700px] mx-auto">
-          Każdy z nas wnosi unikalne doświadczenie i perspektywę. Razem tworzymy strategie, które
-          naprawdę działają.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {
-          team.map((member, index) => (
-            <div
-              class="group relative bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all hover:border-accent hover:-translate-y-2 hover:shadow-xl"
-              data-reveal
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="aspect-[4/5] overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div class="p-6">
-                <div class="font-mono text-[0.7rem] uppercase tracking-wider text-accent font-semibold mb-2">
-                  {member.role}
-                </div>
-                <h3 class="font-display text-[1.25rem] font-bold text-black mb-2">{member.name}</h3>
-                <p class="text-gray-600 text-[0.9rem] leading-relaxed">{member.bio}</p>
-              </div>
             </div>
           ))
         }
@@ -496,53 +422,6 @@ const funFacts = [
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section
-    id="kontakt"
-    class="bg-black text-white px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative overflow-hidden"
-  >
-    <div class="max-w-[1400px] mx-auto text-center relative z-10">
-      <div data-reveal>
-        <div
-          class="font-mono text-[0.75rem] uppercase tracking-wider text-accent mb-6 font-semibold"
-        >
-          Gotowy na współpracę?
-        </div>
-        <h2
-          class="font-display text-[clamp(2rem,5vw,3.5rem)] font-black leading-[1.1] tracking-[-0.02em] mb-8 text-white"
-        >
-          Porozmawiajmy o Twoim<br />
-          <span class="text-accent">e-commerce</span>
-        </h2>
-        <p class="text-[1.125rem] leading-[1.8] text-gray-300 mb-12 max-w-[600px] mx-auto">
-          Umów się na bezpłatną konsultację. Przeanalizujemy Twój sklep i pokażemy, gdzie kryje się
-          potencjał wzrostu.
-        </p>
-        <div class="flex gap-4 flex-wrap justify-center">
-          <a
-            href="mailto:info@talem.eu"
-            class="inline-flex items-center justify-center min-w-[220px] px-8 py-4 rounded-lg font-semibold transition text-base bg-accent text-white border-2 border-accent hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 hover:shadow-xl"
-          >
-            info@talem.eu
-          </a>
-          <a
-            href="tel:+48801080238"
-            class="inline-flex items-center justify-center min-w-[220px] px-8 py-4 rounded-lg font-semibold transition text-base bg-transparent text-white border-2 border-gray-700 hover:border-white hover:bg-white hover:text-black"
-          >
-            +48 801 080 238
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Decorative elements -->
-    <div class="absolute top-20 left-10 w-32 h-32 rounded-full border border-accent/20 opacity-30">
-    </div>
-    <div
-      class="absolute bottom-20 right-10 w-48 h-48 rounded-full border border-accent/10 opacity-20"
-    >
-    </div>
-  </section>
-
+  <AboutUsContact />
   <Footer />
 </BaseLayout>
