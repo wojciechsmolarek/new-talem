@@ -36,88 +36,40 @@ const tools = [
         <p class="text-[1.125rem] leading-[1.8] text-gray-600 mb-10">
           Doświadczenie łączymy z nowoczesnym podejściem, wykorzystując <a class="text-accent hover:underline" href="/analityka-i-automatyzacja">automatyzację</a>, analitykę i rozwiązania oparte na AI. Dzięki temu łączymy perspektywę zdobywaną latami z narzędziami i sposobem myślenia charakterystycznym dla dzisiejszego marketingu cyfrowego.
         </p>
-        <div class="space-y-4">
-          <p class="font-semibold text-black mb-4">W naszej pracy wykorzystujemy:</p>
-          <ul class="space-y-3">
-            {
-              tools.map((tool) => (
-                <li class="flex items-start gap-3">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center mt-1">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-accent"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </div>
-                  <span class="text-[1rem] lg:text-[1.125rem] text-gray-700 leading-relaxed">
-                    {tool.label}
-                  </span>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-        <p class="text-[1.125rem] leading-[1.8] text-gray-600 mt-8">
-          Dzięki temu możemy łączyć wieloletnie doświadczenie z nowoczesnymi metodami optymalizacji.
-        </p>
       </div>
 
       <!-- Timeline visualization -->
       <div class="relative" data-reveal>
         <div class="bg-gray-100 rounded-2xl p-10 relative">
-          <div class="space-y-8">
-            <!-- Timeline item 1 -->
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex-shrink-0 w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm"
-              >
-                2006
-              </div>
-              <div>
-                <h4 class="font-bold text-black mb-2">Początek działalności</h4>
-                <p class="text-gray-600 text-[0.95rem] leading-relaxed">
-                  Start agencji w Bydgoszczy
-                </p>
-              </div>
-            </div>
-
-            <!-- Timeline item 2 -->
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/80 flex items-center justify-center text-white font-bold text-sm"
-              >
-                250+
-              </div>
-              <div>
-                <h4 class="font-bold text-black mb-2">Zrealizowanych projektów</h4>
-                <p class="text-gray-600 text-[0.95rem] leading-relaxed">
-                  Setki wdrożeń dla e-commerce
-                </p>
-              </div>
-            </div>
-
-            <!-- Timeline item 3 -->
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/60 flex items-center justify-center text-white font-bold text-sm"
-              >
-                2024 r
-              </div>
-              <div>
-                <h4 class="font-bold text-black mb-2">AI i automatyzacja</h4>
-                <p class="text-gray-600 text-[0.95rem] leading-relaxed">
-                  Początek integracji pracy z narzędziami AI
-                </p>
-              </div>
-            </div>
+          <div class="space-y-4">
+            <p class="font-semibold text-black mb-4">W naszej pracy wykorzystujemy:</p>
+            <ul class="space-y-3">
+              {
+                tools.map((tool) => (
+                  <li class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center mt-1">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-accent"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <span class="text-[1rem] lg:text-[1.125rem] text-gray-700 leading-relaxed">
+                      {tool.label}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>          
           </div>
         </div>
       </div>

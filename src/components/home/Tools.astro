@@ -1,0 +1,48 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+
+const tools = [
+  { name: 'Ahrefs',         file: 'ahrefs.png',   desc: 'Analiza linków i fraz' },
+  { name: 'Senuto',         file: 'senuto.png',   desc: 'Widoczność w polskim SEO' },
+  { name: 'Screaming Frog', file: 'frog.png',     desc: 'Audyt techniczny' },
+  { name: 'Surfer SEO',     file: 'surfer.png',   desc: 'Optymalizacja treści' },
+  { name: 'Semstorm',       file: 'semstorm.png', desc: 'Badanie słów kluczowych' },
+  { name: 'Majestic',       file: 'majestic.png', desc: 'Profil linków zewnętrznych' },
+  { name: 'Sitebulb',       file: 'sitebulb.png', desc: 'Wizualny crawl witryny' },
+];
+---
+
+<section class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+  <div class="max-w-[1200px] mx-auto">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
+      <SectionHeader
+        label="NASZE NARZĘDZIA"
+        title="Pracujemy na<br />sprawdzonych narzędziach"
+      />
+      <p class="text-gray-500 leading-[1.7] max-w-[420px] text-[0.95rem]">
+        Do codziennej pracy używamy narzędzi, które dają rzetelne dane — nie zgadujemy,
+        mierzymy. Każde z nich ma swoje miejsce w naszym procesie.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+      {tools.map((tool) => (
+        <div class="bg-accent rounded-xl flex flex-col items-center justify-center gap-4 py-8 px-4 group hover:shadow-md transition-shadow duration-300">
+          <div class="h-10 flex items-center justify-center">
+            <img
+              src={`/images/tools/${tool.file}`}
+              alt={tool.name}
+              class="max-h-10 max-w-[100px] w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              loading="lazy"
+            />
+          </div>
+          <span class="font-mono text-[0.65rem] tracking-[0.08em] uppercase text-gray-400 text-center group-hover:text-white transition-colors leading-tight">
+            {tool.desc}
+          </span>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
