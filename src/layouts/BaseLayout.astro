@@ -1,6 +1,10 @@
 ---
 import '../styles/global.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import cookieConsentConfig from '../config/cookieconsent.js';
+import 'vanilla-cookieconsent/dist/cookieconsent.css';
+import '../styles/cookieconsent-overrides.css';
 
 interface Props {
   title?: string;
@@ -28,6 +32,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content={description} />
 
+    <GoogleAnalytics />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -122,6 +128,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <SpeedInsights />
     <script>
       import '../scripts/scroll-reveal';
+    </script>
+
+    <script is:inline define:vars={{ cookieConsentConfig }}>
+      import('vanilla-cookieconsent').then((module) => {
+        module.run(cookieConsentConfig);
+      });
     </script>
   </body>
 </html>
