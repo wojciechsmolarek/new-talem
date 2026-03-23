@@ -78,6 +78,7 @@ const GA_MEASUREMENT_ID = 'G-CBKDTZQFTF';
     };
 
     checkConsent();
-    document.addEventListener('cookieconsent_statuschange', checkConsent);
+    document.addEventListener('cc:onConsent', checkConsent);
+    document.addEventListener('cc:onChange', checkConsent);
   });
 </script> 
