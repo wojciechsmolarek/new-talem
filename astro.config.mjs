@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://talem.eu',
+  site: 'https://www.talem.eu',
   output: 'static',
   integrations: [
     tailwind(),
