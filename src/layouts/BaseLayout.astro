@@ -131,9 +131,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
 
     <script is:inline define:vars={{ cookieConsentConfig }}>
-      import('vanilla-cookieconsent').then((module) => {
-        module.run(cookieConsentConfig);
-      });
+      window.__cookieConsentConfig = cookieConsentConfig;
+    </script>
+
+    <script>
+      import '../scripts/cookieconsent-init';
     </script>
   </body>
 </html>
