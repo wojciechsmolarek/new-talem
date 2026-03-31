@@ -1,26 +1,109 @@
 {
   "redirects": [
-    { "source": "/opieka-nad-stronami-www", "destination": "/monitoring-wydajnosci", "permanent": true },
-    { "source": "/reklama-ppc", "destination": "/", "permanent": true },
-    { "source": "/faq", "destination": "/", "permanent": true },
-    { "source": "/pozycjonowanie-lokalne", "destination": "/", "permanent": true },
-    { "source": "/monitoring-pozycji", "destination": "/monitoring-wydajnosci", "permanent": true },
-    { "source": "/konsultacje-seo", "destination": "/techniczne-seo", "permanent": true },
-    { "source": "/pozycjonowanie-stron-www", "destination": "/", "permanent": true },
-    { "source": "/seo-copywriting", "destination": "/content-seo", "permanent": true },
-    { "source": "/pozycjonowanie-z-rabatem", "destination": "/", "permanent": true },
-    { "source": "/projektowanie-stron-i-serwisow-www", "destination": "/", "permanent": true },
-    { "source": "/wydanie-kodow-authinfo", "destination": "/", "permanent": true },
-    { "source": "/hosting-serwery-wirtualne-ssd-bez-limitu-transferu-danych", "destination": "/", "permanent": true },
-    { "source": "/google-moja-firma", "destination": "/", "permanent": true },
-    { "source": "/optymalizacja-stron-www", "destination": "/", "permanent": true },
-    { "source": "/certyfikaty-ssl", "destination": "/", "permanent": true },
-    { "source": "/domeny-internetowe", "destination": "/", "permanent": true },
-    { "source": "/pozycjonowanie-zagraniczne", "destination": "/", "permanent": true },
-    { "source": "/cesja-domeny", "destination": "/", "permanent": true },
-    { "source": "/cesja-domeny/", "destination": "/", "permanent": true },
-    { "source": "/zmiana-danych-abonenta", "destination": "/", "permanent": true },
-    { "source": "/audyty-seo", "destination": "/techniczne-seo", "permanent": true },
-    { "source": "/pozycjonowanie-sklepow-internetowych", "destination": "/", "permanent": true }
+    {
+      "source": "/opieka-nad-stronami-www",
+      "destination": "/monitoring-wydajnosci",
+      "permanent": true
+    },
+    {
+      "source": "/reklama-ppc",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pozycjonowanie-lokalne",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/monitoring-pozycji",
+      "destination": "/monitoring-wydajnosci",
+      "permanent": true
+    },
+    {
+      "source": "/konsultacje-seo",
+      "destination": "/techniczne-seo",
+      "permanent": true
+    },
+    {
+      "source": "/pozycjonowanie-stron-www",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-copywriting",
+      "destination": "/content-seo",
+      "permanent": true
+    },
+    {
+      "source": "/pozycjonowanie-z-rabatem",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/projektowanie-stron-i-serwisow-www",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wydanie-kodow-authinfo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hosting-serwery-wirtualne-ssd-bez-limitu-transferu-danych",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/google-moja-firma",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/optymalizacja-stron-www",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/certyfikaty-ssl",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/domeny-internetowe",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pozycjonowanie-zagraniczne",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cesja-domeny",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cesja-domeny/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zmiana-danych-abonenta",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/audyty-seo",
+      "destination": "/techniczne-seo",
+      "permanent": true
+    },
+    {
+      "source": "/pozycjonowanie-sklepow-internetowych",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }
