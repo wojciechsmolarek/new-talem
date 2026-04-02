@@ -18,8 +18,11 @@ const {
   schema,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname.replace(/\.html$/, ''), Astro.site);
----
+const path = Astro.url.pathname
+  .replace(/\.html$/, '')
+  .replace(/\/index$/, '/');
+
+const canonicalURL = new URL(path, Astro.site);---
 
 <!doctype html>
 <html lang="pl" class="scroll-smooth">
