@@ -31,11 +31,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
     <meta name="description" content={description} />
 
     <GoogleAnalytics />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -57,9 +57,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" href="/favicon.ico" />
 
     <!-- Schema.org Markup -->
-    {schema && schema.length > 0 && (
-      <Fragment set:html={`<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": schema })}</script>`} />
-    )}
+    {
+      schema && schema.length > 0 && (
+        <Fragment
+          set:html={`<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schema })}</script>`}
+        />
+      )
+    }
   </head>
   <body>
     <slot />

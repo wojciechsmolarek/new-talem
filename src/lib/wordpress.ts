@@ -1,4 +1,4 @@
-const WORDPRESS_API_URL = 'https://www.talem.eu/wp-json/wp/v2';
+const WORDPRESS_API_URL = 'https://www.talem.eu/blog/wp-json/wp/v2';
 
 export interface WordPressPost {
   id: number;
