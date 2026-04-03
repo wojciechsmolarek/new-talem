@@ -18,11 +18,10 @@ const {
   schema,
 } = Astro.props;
 
-const path = Astro.url.pathname
-  .replace(/\.html$/, '')
-  .replace(/\/index$/, '/');
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
 
-const canonicalURL = new URL(path, Astro.site);---
+const canonicalURL = new URL(path, Astro.site);
+---
 
 <!doctype html>
 <html lang="pl" class="scroll-smooth">
@@ -67,6 +66,7 @@ const canonicalURL = new URL(path, Astro.site);---
         />
       )
     }
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   </head>
   <body>
     <slot />
